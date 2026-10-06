@@ -52,6 +52,7 @@ python ml/src/01_inspect_dataset.py
 ## 📊 Phases Status
 - [x] **Phase 1:** Dataset Inspection, Setup & Quality Audit
 - [x] **Phase 2:** Exploratory Data Analysis & Statistical Profiling
-- [ ] **Phase 3:** Data Preprocessing, Imputation & Encoding
-- [ ] **Phase 4:** Feature Engineering & Scaling
-- [ ] **Phase 5:** Baseline Model Training (4 Models)
+- [x] **Phase 3:** Data Preprocessing, Imputation & Encoding
+- [ ] **Phase 4:** Baseline Model Training (4 Models: LR, KNN, RF, SVM)
+- [ ] **Phase 5:** Stratified Cross-Validation & Metric Evaluation
+- [ ] **Phase 6:** Hyperparameter Tuning & Grid Search Optimization
