@@ -1,0 +1,162 @@
+{
+  "correlations_with_price": {
+    "ram_capacity": {
+      "pearson_r": 0.386,
+      "pearson_pvalue": 3.58e-36,
+      "spearman_rho": 0.7508,
+      "spearman_pvalue": 2.37e-178
+    },
+    "internal_memory": {
+      "pearson_r": 0.5572,
+      "pearson_pvalue": 5.28e-81,
+      "spearman_rho": 0.7609,
+      "spearman_pvalue": 6.5e-186
+    },
+    "processor_speed": {
+      "pearson_r": 0.474,
+      "pearson_pvalue": 1.01e-53,
+      "spearman_rho": 0.7908,
+      "spearman_pvalue": 1.02e-201
+    },
+    "refresh_rate": {
+      "pearson_r": 0.2441,
+      "pearson_pvalue": 9.2e-15,
+      "spearman_rho": 0.5567,
+      "spearman_pvalue": 7.36e-81
+    },
+    "primary_camera_rear": {
+      "pearson_r": 0.0921,
+      "pearson_pvalue": 0.00391,
+      "spearman_rho": 0.3705,
+      "spearman_pvalue": 3.05e-33
+    },
+    "primary_camera_front": {
+      "pearson_r": 0.163,
+      "pearson_pvalue": 3.1e-07,
+      "spearman_rho": 0.5582,
+      "spearman_pvalue": 5.78e-81
+    },
+    "fast_charging": {
+      "pearson_r": 0.2776,
+      "pearson_pvalue": 4.51e-15,
+      "spearman_rho": 0.6504,
+      "spearman_pvalue": 1.17e-93
+    },
+    "screen_size": {
+      "pearson_r": 0.1133,
+      "pearson_pvalue": 0.000382,
+      "spearman_rho": 0.3006,
+      "spearman_pvalue": 6.42e-22
+    },
+    "battery_capacity": {
+      "pearson_r": -0.1592,
+      "pearson_pvalue": 6.29e-07,
+      "spearman_rho": -0.3234,
+      "spearman_pvalue": 5.07e-25
+    },
+    "rating": {
+      "pearson_r": 0.2835,
+      "pearson_pvalue": 1.04e-17,
+      "spearman_rho": 0.7718,
+      "spearman_pvalue": 1.32e-174
+    },
+    "num_cores": {
+      "pearson_r": -0.0486,
+      "pearson_pvalue": 0.13,
+      "spearman_rho": -0.0013,
+      "spearman_pvalue": 0.969
+    }
+  },
+  "anova_by_price_category": {
+    "ram_capacity": {
+      "f_statistic": 295.92,
+      "f_pvalue": 1.37e-136,
+      "kruskal_stat": 513.23,
+      "kruskal_pvalue": 6.48e-111,
+      "statistically_significant": true
+    },
+    "internal_memory": {
+      "f_statistic": 183.62,
+      "f_pvalue": 2.16e-94,
+      "kruskal_stat": 494.99,
+      "kruskal_pvalue": 5.81e-107,
+      "statistically_significant": true
+    },
+    "processor_speed": {
+      "f_statistic": 472.03,
+      "f_pvalue": 1.36e-186,
+      "kruskal_stat": 535.52,
+      "kruskal_pvalue": 9.58e-116,
+      "statistically_significant": true
+    },
+    "refresh_rate": {
+      "f_statistic": 136.49,
+      "f_pvalue": 7.72e-74,
+      "kruskal_stat": 293.75,
+      "kruskal_pvalue": 2.24e-63,
+      "statistically_significant": true
+    },
+    "primary_camera_rear": {
+      "f_statistic": 65.74,
+      "f_pvalue": 1.02e-38,
+      "kruskal_stat": 225.27,
+      "kruskal_pvalue": 1.46e-48,
+      "statistically_significant": true
+    },
+    "primary_camera_front": {
+      "f_statistic": 116.96,
+      "f_pvalue": 1.17e-64,
+      "kruskal_stat": 349.14,
+      "kruskal_pvalue": 2.29e-75,
+      "statistically_significant": true
+    },
+    "fast_charging": {
+      "f_statistic": 108.03,
+      "f_pvalue": 2.54e-58,
+      "kruskal_stat": 285.56,
+      "kruskal_pvalue": 1.33e-61,
+      "statistically_significant": true
+    },
+    "screen_size": {
+      "f_statistic": 13.15,
+      "f_pvalue": 2.02e-08,
+      "kruskal_stat": 89.0,
+      "kruskal_pvalue": 3.59e-19,
+      "statistically_significant": true
+    },
+    "battery_capacity": {
+      "f_statistic": 8.73,
+      "f_pvalue": 1.02e-05,
+      "kruskal_stat": 114.16,
+      "kruskal_pvalue": 1.39e-24,
+      "statistically_significant": true
+    },
+    "rating": {
+      "f_statistic": 307.97,
+      "f_pvalue": 1.95e-136,
+      "kruskal_stat": 482.09,
+      "kruskal_pvalue": 3.63e-104,
+      "statistically_significant": true
+    },
+    "num_cores": {
+      "f_statistic": 16.87,
+      "f_pvalue": 1.09e-10,
+      "kruskal_stat": 61.88,
+      "kruskal_pvalue": 2.33e-13,
+      "statistically_significant": true
+    }
+  },
+  "ranked_features_by_f_score": [
+    "processor_speed",
+    "rating",
+    "ram_capacity",
+    "internal_memory",
+    "refresh_rate",
+    "primary_camera_front",
+    "fast_charging",
+    "primary_camera_rear",
+    "num_cores",
+    "screen_size",
+    "battery_capacity"
+  ]
+}

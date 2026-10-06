@@ -49,7 +49,9 @@ python ml/src/01_inspect_dataset.py
 
 ---
 
-## 📊 Phase 1 Status: Completed
-- [x] Dataset structure audit & validation
-- [x] Data quality & missing value reporting
-- [x] Target price categorization verification
+## 📊 Phases Status
+- [x] **Phase 1:** Dataset Inspection, Setup & Quality Audit
+- [x] **Phase 2:** Exploratory Data Analysis & Statistical Profiling
+- [ ] **Phase 3:** Data Preprocessing, Imputation & Encoding
+- [ ] **Phase 4:** Feature Engineering & Scaling
+- [ ] **Phase 5:** Baseline Model Training (4 Models)
