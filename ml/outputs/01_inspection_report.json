@@ -1,0 +1,666 @@
+{
+  "dataset_name": "smartphone_cleaned_v5.csv",
+  "total_rows": 980,
+  "total_columns": 25,
+  "memory_kb": 490.24,
+  "duplicates": {
+    "exact_rows": 0,
+    "duplicate_models": 0
+  },
+  "columns_audit": [
+    {
+      "col_index": 1,
+      "column_name": "brand_name",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 46,
+      "sample_values": [
+        "oneplus",
+        "samsung",
+        "motorola"
+      ]
+    },
+    {
+      "col_index": 2,
+      "column_name": "model",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 980,
+      "sample_values": [
+        "OnePlus 11 5G",
+        "OnePlus Nord CE 2 Lite 5G",
+        "Samsung Galaxy A14 5G"
+      ]
+    },
+    {
+      "col_index": 3,
+      "column_name": "price",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 379,
+      "sample_values": [
+        "54999",
+        "19989",
+        "16499"
+      ]
+    },
+    {
+      "col_index": 4,
+      "column_name": "rating",
+      "dtype": "float64",
+      "null_count": 101,
+      "null_percent": 10.31,
+      "unique_count": 30,
+      "sample_values": [
+        "89.0",
+        "81.0",
+        "75.0"
+      ]
+    },
+    {
+      "col_index": 5,
+      "column_name": "has_5g",
+      "dtype": "bool",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "col_index": 6,
+      "column_name": "has_nfc",
+      "dtype": "bool",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "True",
+        "False"
+      ]
+    },
+    {
+      "col_index": 7,
+      "column_name": "has_ir_blaster",
+      "dtype": "bool",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "False",
+        "True"
+      ]
+    },
+    {
+      "col_index": 8,
+      "column_name": "processor_brand",
+      "dtype": "object",
+      "null_count": 20,
+      "null_percent": 2.04,
+      "unique_count": 13,
+      "sample_values": [
+        "snapdragon",
+        "exynos",
+        "dimensity"
+      ]
+    },
+    {
+      "col_index": 9,
+      "column_name": "num_cores",
+      "dtype": "float64",
+      "null_count": 6,
+      "null_percent": 0.61,
+      "unique_count": 3,
+      "sample_values": [
+        "8.0",
+        "6.0",
+        "4.0"
+      ]
+    },
+    {
+      "col_index": 10,
+      "column_name": "processor_speed",
+      "dtype": "float64",
+      "null_count": 42,
+      "null_percent": 4.29,
+      "unique_count": 35,
+      "sample_values": [
+        "3.2",
+        "2.2",
+        "2.4"
+      ]
+    },
+    {
+      "col_index": 11,
+      "column_name": "battery_capacity",
+      "dtype": "float64",
+      "null_count": 11,
+      "null_percent": 1.12,
+      "unique_count": 89,
+      "sample_values": [
+        "5000.0",
+        "3279.0",
+        "4980.0"
+      ]
+    },
+    {
+      "col_index": 12,
+      "column_name": "fast_charging_available",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "1",
+        "0"
+      ]
+    },
+    {
+      "col_index": 13,
+      "column_name": "fast_charging",
+      "dtype": "float64",
+      "null_count": 211,
+      "null_percent": 21.53,
+      "unique_count": 32,
+      "sample_values": [
+        "100.0",
+        "33.0",
+        "15.0"
+      ]
+    },
+    {
+      "col_index": 14,
+      "column_name": "ram_capacity",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 9,
+      "sample_values": [
+        "12.0",
+        "6.0",
+        "4.0"
+      ]
+    },
+    {
+      "col_index": 15,
+      "column_name": "internal_memory",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 8,
+      "sample_values": [
+        "256.0",
+        "128.0",
+        "64.0"
+      ]
+    },
+    {
+      "col_index": 16,
+      "column_name": "screen_size",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 79,
+      "sample_values": [
+        "6.7",
+        "6.59",
+        "6.6"
+      ]
+    },
+    {
+      "col_index": 17,
+      "column_name": "refresh_rate",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 6,
+      "sample_values": [
+        "120",
+        "90",
+        "60"
+      ]
+    },
+    {
+      "col_index": 18,
+      "column_name": "resolution",
+      "dtype": "object",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 83,
+      "sample_values": [
+        "1440\u2009x\u20093216\u2009",
+        "1080\u2009x\u20092412\u2009",
+        "1080\u2009x\u20092408\u2009"
+      ]
+    },
+    {
+      "col_index": 19,
+      "column_name": "num_rear_cameras",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 4,
+      "sample_values": [
+        "3",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "col_index": 20,
+      "column_name": "num_front_cameras",
+      "dtype": "float64",
+      "null_count": 4,
+      "null_percent": 0.41,
+      "unique_count": 2,
+      "sample_values": [
+        "1.0",
+        "2.0"
+      ]
+    },
+    {
+      "col_index": 21,
+      "column_name": "os",
+      "dtype": "object",
+      "null_count": 14,
+      "null_percent": 1.43,
+      "unique_count": 3,
+      "sample_values": [
+        "android",
+        "ios",
+        "other"
+      ]
+    },
+    {
+      "col_index": 22,
+      "column_name": "primary_camera_rear",
+      "dtype": "float64",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 18,
+      "sample_values": [
+        "50.0",
+        "64.0",
+        "108.0"
+      ]
+    },
+    {
+      "col_index": 23,
+      "column_name": "primary_camera_front",
+      "dtype": "float64",
+      "null_count": 5,
+      "null_percent": 0.51,
+      "unique_count": 24,
+      "sample_values": [
+        "16.0",
+        "13.0",
+        "8.0"
+      ]
+    },
+    {
+      "col_index": 24,
+      "column_name": "extended_memory_available",
+      "dtype": "int64",
+      "null_count": 0,
+      "null_percent": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "0",
+        "1"
+      ]
+    },
+    {
+      "col_index": 25,
+      "column_name": "extended_upto",
+      "dtype": "float64",
+      "null_count": 480,
+      "null_percent": 48.98,
+      "unique_count": 7,
+      "sample_values": [
+        "1024.0",
+        "512.0",
+        "256.0"
+      ]
+    }
+  ],
+  "numerical_statistics": {
+    "price": {
+      "count": 980,
+      "mean": 32520.5,
+      "std": 39531.81,
+      "min": 3499.0,
+      "q25": 12999.0,
+      "median": 19994.5,
+      "q75": 35491.5,
+      "max": 650000.0,
+      "skewness": 6.59
+    },
+    "rating": {
+      "count": 879,
+      "mean": 78.26,
+      "std": 7.4,
+      "min": 60.0,
+      "q25": 74.0,
+      "median": 80.0,
+      "q75": 84.0,
+      "max": 89.0,
+      "skewness": -0.7
+    },
+    "num_cores": {
+      "count": 974,
+      "mean": 7.77,
+      "std": 0.84,
+      "min": 4.0,
+      "q25": 8.0,
+      "median": 8.0,
+      "q75": 8.0,
+      "max": 8.0,
+      "skewness": -3.76
+    },
+    "processor_speed": {
+      "count": 938,
+      "mean": 2.43,
+      "std": 0.46,
+      "min": 1.2,
+      "q25": 2.05,
+      "median": 2.3,
+      "q75": 2.84,
+      "max": 3.22,
+      "skewness": 0.19
+    },
+    "battery_capacity": {
+      "count": 969,
+      "mean": 4817.75,
+      "std": 1009.54,
+      "min": 1821.0,
+      "q25": 4500.0,
+      "median": 5000.0,
+      "q75": 5000.0,
+      "max": 22000.0,
+      "skewness": 9.26
+    },
+    "fast_charging_available": {
+      "count": 980,
+      "mean": 0.85,
+      "std": 0.35,
+      "min": 0.0,
+      "q25": 1.0,
+      "median": 1.0,
+      "q75": 1.0,
+      "max": 1.0,
+      "skewness": -2.01
+    },
+    "fast_charging": {
+      "count": 769,
+      "mean": 46.13,
+      "std": 34.28,
+      "min": 10.0,
+      "q25": 18.0,
+      "median": 33.0,
+      "q75": 66.0,
+      "max": 240.0,
+      "skewness": 1.65
+    },
+    "ram_capacity": {
+      "count": 980,
+      "mean": 6.56,
+      "std": 2.74,
+      "min": 1.0,
+      "q25": 4.0,
+      "median": 6.0,
+      "q75": 8.0,
+      "max": 18.0,
+      "skewness": 0.75
+    },
+    "internal_memory": {
+      "count": 980,
+      "mean": 141.04,
+      "std": 107.13,
+      "min": 8.0,
+      "q25": 64.0,
+      "median": 128.0,
+      "q75": 128.0,
+      "max": 1024.0,
+      "skewness": 3.83
+    },
+    "screen_size": {
+      "count": 980,
+      "mean": 6.54,
+      "std": 0.35,
+      "min": 3.54,
+      "q25": 6.5,
+      "median": 6.58,
+      "q75": 6.67,
+      "max": 8.03,
+      "skewness": -2.12
+    },
+    "refresh_rate": {
+      "count": 980,
+      "mean": 92.26,
+      "std": 28.99,
+      "min": 60.0,
+      "q25": 60.0,
+      "median": 90.0,
+      "q75": 120.0,
+      "max": 240.0,
+      "skewness": 0.3
+    },
+    "num_rear_cameras": {
+      "count": 980,
+      "mean": 2.81,
+      "std": 0.78,
+      "min": 1.0,
+      "q25": 2.0,
+      "median": 3.0,
+      "q75": 3.0,
+      "max": 4.0,
+      "skewness": -0.52
+    },
+    "num_front_cameras": {
+      "count": 976,
+      "mean": 1.03,
+      "std": 0.17,
+      "min": 1.0,
+      "q25": 1.0,
+      "median": 1.0,
+      "q75": 1.0,
+      "max": 2.0,
+      "skewness": 5.55
+    },
+    "primary_camera_rear": {
+      "count": 980,
+      "mean": 50.32,
+      "std": 33.0,
+      "min": 2.0,
+      "q25": 24.0,
+      "median": 50.0,
+      "q75": 64.0,
+      "max": 200.0,
+      "skewness": 1.77
+    },
+    "primary_camera_front": {
+      "count": 975,
+      "mean": 16.59,
+      "std": 10.88,
+      "min": 0.3,
+      "q25": 8.0,
+      "median": 16.0,
+      "q75": 16.0,
+      "max": 60.0,
+      "skewness": 1.44
+    },
+    "extended_memory_available": {
+      "count": 980,
+      "mean": 0.63,
+      "std": 0.48,
+      "min": 0.0,
+      "q25": 0.0,
+      "median": 1.0,
+      "q75": 1.0,
+      "max": 1.0,
+      "skewness": -0.54
+    },
+    "extended_upto": {
+      "count": 500,
+      "mean": 736.06,
+      "std": 366.89,
+      "min": 32.0,
+      "q25": 512.0,
+      "median": 1024.0,
+      "q75": 1024.0,
+      "max": 2048.0,
+      "skewness": 0.14
+    }
+  },
+  "price_summary": {
+    "min": 3499,
+    "q25": 12999,
+    "median": 19994,
+    "q75": 35491,
+    "max": 650000,
+    "mean": 32520.5,
+    "std": 39531.81,
+    "skewness": 6.59
+  },
+  "target_class_distribution": {
+    "Budget": {
+      "count": 337,
+      "percent": 34.39,
+      "range": "<= Rs. 15,000"
+    },
+    "Mid-Range": {
+      "count": 349,
+      "percent": 35.61,
+      "range": "Rs. 15,001 - 30,000"
+    },
+    "Premium": {
+      "count": 133,
+      "percent": 13.57,
+      "range": "Rs. 30,001 - 50,000"
+    },
+    "Flagship": {
+      "count": 161,
+      "percent": 16.43,
+      "range": "> Rs. 50,000"
+    }
+  },
+  "categorical_summary": {
+    "brand_name": {
+      "n_unique": 46,
+      "top_5": {
+        "xiaomi": 134,
+        "samsung": 132,
+        "vivo": 111,
+        "realme": 97,
+        "oppo": 88
+      }
+    },
+    "model": {
+      "n_unique": 980,
+      "top_5": {
+        "OnePlus 11 5G": 1,
+        "OnePlus Nord CE 2 Lite 5G": 1,
+        "Samsung Galaxy A14 5G": 1,
+        "Motorola Moto G62 5G": 1,
+        "Realme 10 Pro Plus": 1
+      }
+    },
+    "has_5g": {
+      "n_unique": 2,
+      "top_5": {
+        "True": 549,
+        "False": 431
+      }
+    },
+    "has_nfc": {
+      "n_unique": 2,
+      "top_5": {
+        "False": 587,
+        "True": 393
+      }
+    },
+    "has_ir_blaster": {
+      "n_unique": 2,
+      "top_5": {
+        "False": 821,
+        "True": 159
+      }
+    },
+    "processor_brand": {
+      "n_unique": 13,
+      "top_5": {
+        "snapdragon": 413,
+        "helio": 201,
+        "dimensity": 177,
+        "exynos": 50,
+        "bionic": 45
+      }
+    },
+    "resolution": {
+      "n_unique": 83,
+      "top_5": {
+        "1080\u2009x\u20092400\u2009": 342,
+        "720\u2009x\u20091600\u2009": 149,
+        "1080\u2009x\u20092408\u2009": 65,
+        "1080\u2009x\u20092412\u2009": 58,
+        "1080\u2009x\u20092340\u2009": 43
+      }
+    },
+    "os": {
+      "n_unique": 3,
+      "top_5": {
+        "android": 909,
+        "ios": 46,
+        "other": 11
+      }
+    }
+  },
+  "data_quality_issues": [
+    {
+      "issue": "String Boolean Values",
+      "columns": [
+        "has_5g",
+        "has_nfc",
+        "has_ir_blaster"
+      ],
+      "description": "Values stored as string 'True' / 'False' rather than native boolean or 0/1 integers.",
+      "remediation": "Convert to integer boolean (1/0) during preprocessing."
+    },
+    {
+      "issue": "Composite String Format in Resolution",
+      "columns": [
+        "resolution"
+      ],
+      "description": "Stored as 'width x height' strings (e.g. '1080 x 2400').",
+      "remediation": "Parse into resolution_width and resolution_height numerical features."
+    },
+    {
+      "issue": "Missing Values in Hardware Specs",
+      "columns": [
+        "rating",
+        "processor_brand",
+        "processor_speed",
+        "fast_charging",
+        "num_front_cameras",
+        "os",
+        "primary_camera_front",
+        "extended_upto"
+      ],
+      "description": "Missing values present in multiple columns requiring principled imputation (median for numerical, mode / 'Unknown' for categorical).",
+      "remediation": "Median imputation for numerical specs; domain fallback/mode for categorical attributes."
+    },
+    {
+      "issue": "Target Leakage Prevention",
+      "columns": [
+        "price"
+      ],
+      "description": "Continuous price column is used exclusively to generate the categorical target variable (price_category) and MUST be dropped from model input features.",
+      "remediation": "Drop 'price' and 'model' from feature matrix X before training."
+    }
+  ]
+}
