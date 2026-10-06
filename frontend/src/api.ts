@@ -176,3 +176,51 @@ export async function fetchEdaInsights(): Promise<any> {
   if (!res.ok) throw new Error('Failed to fetch EDA insights');
   return res.json();
 }
+
+export interface DatasetRecordsResponse {
+  total_records: number;
+  page: number;
+  total_pages: number;
+  limit: number;
+  records: {
+    model: string;
+    brand: string;
+    price_inr: number;
+    price_usd: number;
+    tier: string;
+    rating: number;
+    has_5g: boolean;
+    has_nfc: boolean;
+    processor_brand: string;
+    processor_speed: number;
+    ram_gb: number;
+    storage_gb: number;
+    battery_mah: number;
+    screen_size: number;
+    refresh_rate: number;
+    camera_rear: number;
+    camera_front: number;
+  }[];
+}
+
+export async function fetchDatasetRecords(params?: {
+  search?: string;
+  tier?: string;
+  brand?: string;
+  sort_by?: string;
+  page?: number;
+  limit?: number;
+}): Promise<DatasetRecordsResponse> {
+  const query = new URLSearchParams();
+  if (params?.search) query.append('search', params.search);
+  if (params?.tier) query.append('tier', params.tier);
+  if (params?.brand) query.append('brand', params.brand);
+  if (params?.sort_by) query.append('sort_by', params.sort_by);
+  if (params?.page) query.append('page', params.page.toString());
+  if (params?.limit) query.append('limit', params.limit.toString());
+
+  const res = await fetch(`${API_BASE}/analytics/records?${query.toString()}`);
+  if (!res.ok) throw new Error('Failed to fetch dataset records');
+  return res.json();
+}
+
