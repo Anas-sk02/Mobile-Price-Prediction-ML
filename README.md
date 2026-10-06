@@ -54,6 +54,6 @@ python ml/src/01_inspect_dataset.py
 - [x] **Phase 2:** Exploratory Data Analysis & Statistical Profiling
 - [x] **Phase 3:** Data Preprocessing, Imputation & Encoding
 - [x] **Phase 4:** Baseline Model Training (4 Models: LR, KNN, RF, SVM)
-- [ ] **Phase 5:** Hyperparameter Tuning & Grid Search Optimization
+- [x] **Phase 5:** Hyperparameter Tuning & Grid Search Optimization (Champion: Random Forest - 82.65% Acc, 0.9613 ROC-AUC)
 - [ ] **Phase 6:** Model Evaluation, Cross-Validation & ROC Curves
 - [ ] **Phase 7:** Feature Importance & Explainability (SHAP / MDI)
