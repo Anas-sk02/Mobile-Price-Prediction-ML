@@ -6,6 +6,7 @@ import { PredictorView } from './components/PredictorView';
 import { ModelBenchmarkingView } from './components/ModelBenchmarkingView';
 import { ExplainabilityView } from './components/ExplainabilityView';
 import { DatasetAnalyticsView } from './components/DatasetAnalyticsView';
+import { AboutView } from './components/AboutView';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<string>('predict');
@@ -56,6 +57,10 @@ export function App() {
 
         {activeTab === 'analytics' && (
           <DatasetAnalyticsView />
+        )}
+
+        {activeTab === 'about' && (
+          <AboutView />
         )}
       </main>
 

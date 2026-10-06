@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cpu, Layers, Database, Sparkles, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Cpu, Layers, Database, Sparkles, CheckCircle2, AlertCircle, BookOpen } from 'lucide-react';
 
 interface NavbarProps {
   activeTab: string;
@@ -13,6 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeTab, setActiveTab, apiOnli
     { id: 'benchmark', label: 'Model Benchmarking', icon: Layers },
     { id: 'explainability', label: 'Feature Explainability', icon: Cpu },
     { id: 'analytics', label: 'Dataset Insights', icon: Database },
+    { id: 'about', label: 'Methodology & Viva', icon: BookOpen },
   ];
 
   return (

@@ -1,62 +1,99 @@
 # SmartPrice — Smartphone Price Category Prediction & ML Model Benchmarking System
 
-An end-to-end Machine Learning system for predicting smartphone price categories and benchmarking 4 classification models (**Logistic Regression**, **K-Nearest Neighbors**, **Random Forest**, and **Support Vector Machine**).
+An end-to-end Machine Learning system for predicting smartphone price categories and benchmarking 4 classification models (**Random Forest**, **Support Vector Machine**, **K-Nearest Neighbors**, and **Multinomial Logistic Regression**).
+
+[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-1.0.0-009688.svg)](https://fastapi.tiangolo.com/)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.8.0-F7931E.svg)](https://scikit-learn.org/)
+[![React](https://img.shields.io/badge/React-19.2-61DAFB.svg)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6.0-3178C6.svg)](https://www.typescriptlang.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.3-38B2AC.svg)](https://tailwindcss.com/)
 
 ---
 
 ## 📌 Project Overview
 
-- **Problem Type:** Multi-Class Classification (4 Price Categories: *Budget*, *Mid-Range*, *Premium*, *Flagship*)
-- **Dataset:** 980 smartphone records with 25 technical and hardware specifications
-- **Models Evaluated:** Logistic Regression, KNN, Random Forest, SVM (No XGBoost)
-- **Evaluation Metrics:** Accuracy, Precision, Recall, F1-Score (Macro & Weighted), ROC-AUC
-- **Validation:** Stratified 5-Fold Cross-Validation & Hyperparameter Tuning
+- **Problem Type:** Multi-Class Classification (4 Price Tiers: *Budget*, *Mid-Range*, *Premium*, *Flagship*)
+- **Dataset:** 980 validated smartphone records with 25 technical and hardware specifications
+- **Models Benchmarked:** Random Forest (Champion: **82.65% Acc, 0.9613 ROC-AUC**), SVM, KNN, Logistic Regression
+- **Validation:** 5-Fold Stratified Cross-Validation & Grid Search Optimization (Zero Data Leakage)
+- **Explainability:** Model-Agnostic Permutation Importance on Test Partition & Tree Gini Impurity (MDI)
+- **Full Stack:** FastAPI Backend (10 verified REST endpoints) + React TypeScript Tailwind Interactive Web Dashboard
 
 ---
 
-## 🚀 Quick Setup
+## 📊 Final Model Benchmarking Summary
+
+| Model Architecture | Test Accuracy | 5-Fold CV Accuracy | Macro F1-Score | Weighted F1-Score | Multi-Class ROC-AUC (OvR) | Status |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Random Forest Classifier** 🏆 | **82.65%** | **78.06%** | **79.96%** | **82.39%** | **0.9613** | **Production Champion** |
+| **Support Vector Machine (RBF)** | **80.10%** | 75.28% | **78.07%** | 80.05% | **0.9591** | Tuned Baseline |
+| **K-Nearest Neighbors (KNN)** | **79.59%** | 74.68% | **76.38%** | 79.50% | **0.9517** | Tuned Baseline |
+| **Multinomial Logistic Regression** | **78.57%** | 74.22% | **76.39%** | 78.57% | **0.9451** | Tuned Baseline |
+
+---
+
+## 🚀 Quickstart Guide
 
 ### 1. Install Dependencies
 ```bash
 pip install -r requirements.txt
+cd frontend && npm install && cd ..
 ```
 
-### 2. Run Dataset Inspection (Phase 1)
+### 2. Run Backend API Server
 ```bash
-python ml/src/01_inspect_dataset.py
+python backend/run.py
+```
+*API interactive documentation: `http://localhost:8000/docs`*
+
+### 3. Run Frontend Web Application
+```bash
+cd frontend
+npm run dev
+```
+*Web dashboard: `http://localhost:3000`*
+
+### 4. Run System Verification Tests
+```bash
+python scripts/verify_system.py
 ```
 
 ---
 
-## 📁 Repository Structure
+## 📁 Repository Architecture
 
 ```text
+├── backend/                  # FastAPI Application
+│   ├── app/
+│   │   ├── main.py           # Application Entrypoint & CORS
+│   │   ├── predictor.py      # Preprocessing Pipeline & Real-Time Inference
+│   │   ├── schemas.py        # Pydantic Request/Response Models
+│   │   └── routes/           # Predict, Models, Analytics, Health Routers
+│   ├── tests/                # TestClient Integration Suite (10/10 Tests Passing)
+│   └── run.py                # Standalone Server Launcher
 ├── data/
-│   ├── raw/
-│   │   └── smartphone_cleaned_v5.csv
-│   └── processed/
-├── ml/
+│   ├── raw/                  # smartphone_cleaned_v5.csv
+│   └── processed/            # Cleaned data, train/test splits, numpy arrays
+├── frontend/                 # React 19 + TypeScript + Tailwind Application
 │   ├── src/
-│   │   └── 01_inspect_dataset.py
-│   ├── outputs/
-│   │   ├── 01_inspection_report.json
-│   │   └── 01_inspection_summary.md
-│   └── models/
+│   │   ├── components/       # Predictor, Benchmarking, Explainability, Analytics, About
+│   │   ├── api.ts            # Typed Backend API Client & Device Presets
+│   │   └── App.tsx           # Main Shell
+│   └── vite.config.ts        # Vite + Tailwind + Proxy Configuration
+├── ml/
+│   ├── src/                  # Automated pipeline scripts (01 to 07)
+│   ├── models/               # Serialized pipelines & champion models (.joblib)
+│   └── outputs/              # Evaluation reports, JSONs, and publication figures
+├── reports/
+│   └── academic_project_report.md # Complete 10-page academic report & Viva guide
+├── scripts/
+│   └── verify_system.py      # Automated end-to-end health validation
 ├── requirements.txt
-├── .gitignore
 └── README.md
 ```
 
 ---
 
-## 📊 Phases Status
-- [x] **Phase 1:** Dataset Inspection, Setup & Quality Audit
-- [x] **Phase 2:** Exploratory Data Analysis & Statistical Profiling
-- [x] **Phase 3:** Data Preprocessing, Imputation & Encoding
-- [x] **Phase 4:** Baseline Model Training (4 Models: LR, KNN, RF, SVM)
-- [x] **Phase 5:** Hyperparameter Tuning & Grid Search Optimization (Champion: Random Forest - 82.65% Acc, 0.9613 ROC-AUC)
-- [x] **Phase 6:** Model Evaluation, Cross-Validation, ROC/PR Curves & Error Analysis
-- [x] **Phase 7:** Feature Importance & Explainability (Permutation Importance, Tree MDI, Log-Odds Weights)
-- [x] **Phase 8:** Backend FastAPI Engine & Multi-Model Prediction Pipeline (10 Verified Endpoints)
-- [x] **Phase 9:** Frontend Web Application & Interactive UI Dashboard (React + TypeScript + Tailwind)
-- [ ] **Phase 10:** Final System Integration & Academic Report Outputs Verification
+## 📄 Academic Project Report & Viva Voce
+The complete 10-page academic lab report with mathematical derivations, confusion matrix breakdowns, and top 10 Viva Voce questions is available in [`reports/academic_project_report.md`](file:///c:/Users/wwa90/OneDrive/Desktop/MLProject/reports/academic_project_report.md).
