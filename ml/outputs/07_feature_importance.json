@@ -1,0 +1,705 @@
+{
+  "ranked_features": [
+    {
+      "feature": "performance_score",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0369,
+      "permutation_std": 0.0175,
+      "mdi_importance": 0.0956
+    },
+    {
+      "feature": "processor_speed",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0298,
+      "permutation_std": 0.0142,
+      "mdi_importance": 0.0533
+    },
+    {
+      "feature": "ram_capacity",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0242,
+      "permutation_std": 0.0115,
+      "mdi_importance": 0.0498
+    },
+    {
+      "feature": "rating",
+      "group": "Other / Miscellaneous",
+      "permutation_mean": 0.0242,
+      "permutation_std": 0.0093,
+      "mdi_importance": 0.0793
+    },
+    {
+      "feature": "primary_camera_front",
+      "group": "Camera Systems",
+      "permutation_mean": 0.0189,
+      "permutation_std": 0.0092,
+      "mdi_importance": 0.0394
+    },
+    {
+      "feature": "has_nfc",
+      "group": "Connectivity & Expansion",
+      "permutation_mean": 0.0162,
+      "permutation_std": 0.0087,
+      "mdi_importance": 0.0315
+    },
+    {
+      "feature": "internal_memory",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0158,
+      "permutation_std": 0.0074,
+      "mdi_importance": 0.0432
+    },
+    {
+      "feature": "ppi",
+      "group": "Display & Visuals",
+      "permutation_mean": 0.0147,
+      "permutation_std": 0.0047,
+      "mdi_importance": 0.0561
+    },
+    {
+      "feature": "processor_grouped_helio",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0142,
+      "permutation_std": 0.0056,
+      "mdi_importance": 0.0066
+    },
+    {
+      "feature": "refresh_rate",
+      "group": "Display & Visuals",
+      "permutation_mean": 0.0136,
+      "permutation_std": 0.008,
+      "mdi_importance": 0.0224
+    },
+    {
+      "feature": "has_5g",
+      "group": "Connectivity & Expansion",
+      "permutation_mean": 0.0116,
+      "permutation_std": 0.008,
+      "mdi_importance": 0.0252
+    },
+    {
+      "feature": "resolution_height",
+      "group": "Display & Visuals",
+      "permutation_mean": 0.0109,
+      "permutation_std": 0.0059,
+      "mdi_importance": 0.0443
+    },
+    {
+      "feature": "primary_camera_rear",
+      "group": "Camera Systems",
+      "permutation_mean": 0.0098,
+      "permutation_std": 0.0067,
+      "mdi_importance": 0.0281
+    },
+    {
+      "feature": "resolution_width",
+      "group": "Display & Visuals",
+      "permutation_mean": 0.0096,
+      "permutation_std": 0.008,
+      "mdi_importance": 0.0439
+    },
+    {
+      "feature": "extended_memory_available",
+      "group": "Connectivity & Expansion",
+      "permutation_mean": 0.0089,
+      "permutation_std": 0.0079,
+      "mdi_importance": 0.019
+    },
+    {
+      "feature": "brand_grouped_nokia",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0087,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0014
+    },
+    {
+      "feature": "processor_grouped_snapdragon",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0082,
+      "permutation_std": 0.0064,
+      "mdi_importance": 0.0083
+    },
+    {
+      "feature": "pixel_count",
+      "group": "Display & Visuals",
+      "permutation_mean": 0.0082,
+      "permutation_std": 0.0122,
+      "mdi_importance": 0.0594
+    },
+    {
+      "feature": "screen_size",
+      "group": "Display & Visuals",
+      "permutation_mean": 0.008,
+      "permutation_std": 0.0078,
+      "mdi_importance": 0.0326
+    },
+    {
+      "feature": "num_rear_cameras",
+      "group": "Camera Systems",
+      "permutation_mean": 0.007,
+      "permutation_std": 0.0047,
+      "mdi_importance": 0.0117
+    },
+    {
+      "feature": "brand_grouped_realme",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0069,
+      "permutation_std": 0.0036,
+      "mdi_importance": 0.0051
+    },
+    {
+      "feature": "extended_upto",
+      "group": "Connectivity & Expansion",
+      "permutation_mean": 0.0065,
+      "permutation_std": 0.0062,
+      "mdi_importance": 0.0096
+    },
+    {
+      "feature": "screen_to_battery_ratio",
+      "group": "Battery & Power",
+      "permutation_mean": 0.0049,
+      "permutation_std": 0.0074,
+      "mdi_importance": 0.0381
+    },
+    {
+      "feature": "processor_grouped_dimensity",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0038,
+      "permutation_std": 0.0039,
+      "mdi_importance": 0.0088
+    },
+    {
+      "feature": "brand_grouped_poco",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0037,
+      "permutation_std": 0.0019,
+      "mdi_importance": 0.0059
+    },
+    {
+      "feature": "total_cameras",
+      "group": "Camera Systems",
+      "permutation_mean": 0.0028,
+      "permutation_std": 0.0051,
+      "mdi_importance": 0.0121
+    },
+    {
+      "feature": "brand_grouped_iqoo",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0026,
+      "permutation_std": 0.0038,
+      "mdi_importance": 0.0016
+    },
+    {
+      "feature": "has_ir_blaster",
+      "group": "Connectivity & Expansion",
+      "permutation_mean": 0.002,
+      "permutation_std": 0.0025,
+      "mdi_importance": 0.0055
+    },
+    {
+      "feature": "brand_grouped_samsung",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0016,
+      "permutation_std": 0.0019,
+      "mdi_importance": 0.0059
+    },
+    {
+      "feature": "ram_to_storage_ratio",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0012,
+      "permutation_std": 0.0025,
+      "mdi_importance": 0.0176
+    },
+    {
+      "feature": "processor_grouped_exynos",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0011,
+      "permutation_std": 0.0018,
+      "mdi_importance": 0.004
+    },
+    {
+      "feature": "brand_grouped_vivo",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0011,
+      "permutation_std": 0.0024,
+      "mdi_importance": 0.0042
+    },
+    {
+      "feature": "brand_grouped_other_brand",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0006,
+      "permutation_std": 0.0022,
+      "mdi_importance": 0.0028
+    },
+    {
+      "feature": "aspect_ratio",
+      "group": "Display & Visuals",
+      "permutation_mean": 0.0005,
+      "permutation_std": 0.0033,
+      "mdi_importance": 0.0191
+    },
+    {
+      "feature": "brand_grouped_oneplus",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0002,
+      "permutation_std": 0.0016,
+      "mdi_importance": 0.004
+    },
+    {
+      "feature": "fast_charging_available",
+      "group": "Battery & Power",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0047
+    },
+    {
+      "feature": "num_cores",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0024
+    },
+    {
+      "feature": "num_front_cameras",
+      "group": "Camera Systems",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0015
+    },
+    {
+      "feature": "processor_grouped_unisoc",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0003
+    },
+    {
+      "feature": "os_grouped_other_os",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0009
+    },
+    {
+      "feature": "brand_grouped_sony",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0006
+    },
+    {
+      "feature": "brand_grouped_asus",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0009
+    },
+    {
+      "feature": "brand_grouped_honor",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0008
+    },
+    {
+      "feature": "brand_grouped_nubia",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0008
+    },
+    {
+      "feature": "brand_grouped_infinix",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0013
+    },
+    {
+      "feature": "brand_grouped_google",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0023
+    },
+    {
+      "feature": "processor_grouped_other_proc",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0015
+    },
+    {
+      "feature": "processor_grouped_tiger",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.001
+    },
+    {
+      "feature": "processor_grouped_kirin",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0004
+    },
+    {
+      "feature": "brand_grouped_oppo",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0037
+    },
+    {
+      "feature": "brand_grouped_itel",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0001
+    },
+    {
+      "feature": "brand_grouped_tecno",
+      "group": "Brand & Operating System",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0008
+    },
+    {
+      "feature": "processor_grouped_google",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": 0.0,
+      "permutation_std": 0.0,
+      "mdi_importance": 0.0007
+    },
+    {
+      "feature": "brand_grouped_huawei",
+      "group": "Brand & Operating System",
+      "permutation_mean": -0.0,
+      "permutation_std": 0.0013,
+      "mdi_importance": 0.0013
+    },
+    {
+      "feature": "fast_charging",
+      "group": "Battery & Power",
+      "permutation_mean": -0.0002,
+      "permutation_std": 0.0078,
+      "mdi_importance": 0.0286
+    },
+    {
+      "feature": "brand_grouped_motorola",
+      "group": "Brand & Operating System",
+      "permutation_mean": -0.0006,
+      "permutation_std": 0.0021,
+      "mdi_importance": 0.0026
+    },
+    {
+      "feature": "brand_grouped_apple",
+      "group": "Brand & Operating System",
+      "permutation_mean": -0.0009,
+      "permutation_std": 0.0027,
+      "mdi_importance": 0.005
+    },
+    {
+      "feature": "brand_grouped_xiaomi",
+      "group": "Brand & Operating System",
+      "permutation_mean": -0.0012,
+      "permutation_std": 0.0017,
+      "mdi_importance": 0.0045
+    },
+    {
+      "feature": "battery_capacity",
+      "group": "Battery & Power",
+      "permutation_mean": -0.0013,
+      "permutation_std": 0.0089,
+      "mdi_importance": 0.024
+    },
+    {
+      "feature": "os_grouped_android",
+      "group": "Brand & Operating System",
+      "permutation_mean": -0.0014,
+      "permutation_std": 0.0013,
+      "mdi_importance": 0.0063
+    },
+    {
+      "feature": "processor_grouped_bionic",
+      "group": "Core Hardware & Processor",
+      "permutation_mean": -0.0016,
+      "permutation_std": 0.001,
+      "mdi_importance": 0.003
+    },
+    {
+      "feature": "os_grouped_ios",
+      "group": "Brand & Operating System",
+      "permutation_mean": -0.0018,
+      "permutation_std": 0.0005,
+      "mdi_importance": 0.0047
+    }
+  ],
+  "grouped_importance": {
+    "Core Hardware & Processor": 0.2964,
+    "Display & Visuals": 0.2778,
+    "Battery & Power": 0.0954,
+    "Camera Systems": 0.0928,
+    "Connectivity & Expansion": 0.0908,
+    "Other / Miscellaneous": 0.0793,
+    "Brand & Operating System": 0.0675
+  },
+  "logistic_regression_weights": {
+    "Budget": {
+      "rating": -0.4678,
+      "num_cores": -0.0824,
+      "processor_speed": -0.9156,
+      "battery_capacity": 0.0173,
+      "fast_charging_available": 0.8822,
+      "fast_charging": -0.4894,
+      "ram_capacity": -0.7763,
+      "internal_memory": -3.7707,
+      "screen_size": 0.4976,
+      "refresh_rate": -0.2254,
+      "num_rear_cameras": -0.1821,
+      "num_front_cameras": -0.1784,
+      "primary_camera_rear": -0.7188,
+      "primary_camera_front": -0.7987,
+      "extended_memory_available": 0.3509,
+      "extended_upto": -0.0442,
+      "has_5g": -1.0929,
+      "has_nfc": -0.8445,
+      "has_ir_blaster": -0.1037,
+      "resolution_width": -0.8869,
+      "resolution_height": 0.3365,
+      "pixel_count": 0.1485,
+      "aspect_ratio": 1.1496,
+      "ppi": -0.5961,
+      "total_cameras": -0.2116,
+      "screen_to_battery_ratio": 0.683,
+      "ram_to_storage_ratio": -0.3486,
+      "performance_score": -0.5731,
+      "brand_grouped_apple": -0.6164,
+      "brand_grouped_asus": -0.0031,
+      "brand_grouped_google": -2.0441,
+      "brand_grouped_honor": 0.0971,
+      "brand_grouped_huawei": -0.6065,
+      "brand_grouped_infinix": -0.2796,
+      "brand_grouped_iqoo": 0.4282,
+      "brand_grouped_itel": 0.1735,
+      "brand_grouped_motorola": 0.683,
+      "brand_grouped_nokia": -0.5382,
+      "brand_grouped_nubia": -0.0078,
+      "brand_grouped_oneplus": -2.3314,
+      "brand_grouped_oppo": -0.2921,
+      "brand_grouped_other_brand": 1.3434,
+      "brand_grouped_poco": 3.1908,
+      "brand_grouped_realme": 2.5345,
+      "brand_grouped_samsung": -1.0828,
+      "brand_grouped_sony": -2.2437,
+      "brand_grouped_tecno": 0.0147,
+      "brand_grouped_vivo": -0.6317,
+      "brand_grouped_xiaomi": 1.8617,
+      "processor_grouped_bionic": -0.5923,
+      "processor_grouped_dimensity": 0.6599,
+      "processor_grouped_exynos": -1.0198,
+      "processor_grouped_google": -0.272,
+      "processor_grouped_helio": 0.4061,
+      "processor_grouped_kirin": 0.3992,
+      "processor_grouped_other_proc": -0.664,
+      "processor_grouped_snapdragon": -0.1843,
+      "processor_grouped_tiger": 0.6337,
+      "processor_grouped_unisoc": 0.2829,
+      "os_grouped_android": 1.2606,
+      "os_grouped_ios": -0.6164,
+      "os_grouped_other_os": -0.9947
+    },
+    "Mid-Range": {
+      "rating": -0.8702,
+      "num_cores": 0.2257,
+      "processor_speed": -0.0458,
+      "battery_capacity": 0.1708,
+      "fast_charging_available": 0.7487,
+      "fast_charging": -0.1644,
+      "ram_capacity": 0.2244,
+      "internal_memory": 1.2624,
+      "screen_size": -0.4783,
+      "refresh_rate": 0.286,
+      "num_rear_cameras": -0.006,
+      "num_front_cameras": 0.3052,
+      "primary_camera_rear": 0.207,
+      "primary_camera_front": -0.0028,
+      "extended_memory_available": 0.5346,
+      "extended_upto": 0.1011,
+      "has_5g": -0.2476,
+      "has_nfc": 0.0649,
+      "has_ir_blaster": 0.2621,
+      "resolution_width": -0.016,
+      "resolution_height": -0.2724,
+      "pixel_count": 0.411,
+      "aspect_ratio": 0.6826,
+      "ppi": -0.7602,
+      "total_cameras": 0.0609,
+      "screen_to_battery_ratio": 0.2659,
+      "ram_to_storage_ratio": 0.5136,
+      "performance_score": -1.1683,
+      "brand_grouped_apple": -0.7172,
+      "brand_grouped_asus": -0.9089,
+      "brand_grouped_google": -0.3092,
+      "brand_grouped_honor": 0.4154,
+      "brand_grouped_huawei": 0.9872,
+      "brand_grouped_infinix": 0.0672,
+      "brand_grouped_iqoo": 1.5997,
+      "brand_grouped_itel": -0.1457,
+      "brand_grouped_motorola": -0.209,
+      "brand_grouped_nokia": -1.2805,
+      "brand_grouped_nubia": -1.0613,
+      "brand_grouped_oneplus": 1.8655,
+      "brand_grouped_oppo": 0.3872,
+      "brand_grouped_other_brand": -0.9045,
+      "brand_grouped_poco": 0.2119,
+      "brand_grouped_realme": 1.472,
+      "brand_grouped_samsung": -1.4099,
+      "brand_grouped_sony": 0.0913,
+      "brand_grouped_tecno": 0.0362,
+      "brand_grouped_vivo": 0.3619,
+      "brand_grouped_xiaomi": -0.1499,
+      "processor_grouped_bionic": -0.6308,
+      "processor_grouped_dimensity": 1.4798,
+      "processor_grouped_exynos": 1.1557,
+      "processor_grouped_google": -1.4717,
+      "processor_grouped_helio": 0.9519,
+      "processor_grouped_kirin": -1.2774,
+      "processor_grouped_other_proc": 0.6678,
+      "processor_grouped_snapdragon": 0.4243,
+      "processor_grouped_tiger": -0.6297,
+      "processor_grouped_unisoc": -0.2706,
+      "os_grouped_android": 0.6255,
+      "os_grouped_ios": -0.7172,
+      "os_grouped_other_os": 0.4909
+    },
+    "Premium": {
+      "rating": 0.5759,
+      "num_cores": -0.1106,
+      "processor_speed": 1.0031,
+      "battery_capacity": 0.288,
+      "fast_charging_available": -0.4595,
+      "fast_charging": 0.3419,
+      "ram_capacity": 1.7849,
+      "internal_memory": 0.9682,
+      "screen_size": -0.3272,
+      "refresh_rate": 0.1078,
+      "num_rear_cameras": -0.0555,
+      "num_front_cameras": 0.1286,
+      "primary_camera_rear": 0.1035,
+      "primary_camera_front": 0.5576,
+      "extended_memory_available": -0.0195,
+      "extended_upto": -0.1311,
+      "has_5g": 0.3897,
+      "has_nfc": 0.392,
+      "has_ir_blaster": 0.1643,
+      "resolution_width": 0.0366,
+      "resolution_height": -0.7062,
+      "pixel_count": 0.096,
+      "aspect_ratio": -0.5635,
+      "ppi": 0.089,
+      "total_cameras": -0.0245,
+      "screen_to_battery_ratio": 0.2758,
+      "ram_to_storage_ratio": 0.1061,
+      "performance_score": -1.11,
+      "brand_grouped_apple": 0.1911,
+      "brand_grouped_asus": -1.2796,
+      "brand_grouped_google": 1.8916,
+      "brand_grouped_honor": 0.5236,
+      "brand_grouped_huawei": -1.1792,
+      "brand_grouped_infinix": 0.4418,
+      "brand_grouped_iqoo": 0.1295,
+      "brand_grouped_itel": -0.0273,
+      "brand_grouped_motorola": -0.532,
+      "brand_grouped_nokia": 2.2431,
+      "brand_grouped_nubia": 0.5005,
+      "brand_grouped_oneplus": 0.6424,
+      "brand_grouped_oppo": -0.3015,
+      "brand_grouped_other_brand": -1.0876,
+      "brand_grouped_poco": -1.03,
+      "brand_grouped_realme": -0.3618,
+      "brand_grouped_samsung": 1.1121,
+      "brand_grouped_sony": -1.0141,
+      "brand_grouped_tecno": 0.3908,
+      "brand_grouped_vivo": -0.0394,
+      "brand_grouped_xiaomi": -1.215,
+      "processor_grouped_bionic": 1.1175,
+      "processor_grouped_dimensity": 0.6084,
+      "processor_grouped_exynos": 0.6893,
+      "processor_grouped_google": -0.3367,
+      "processor_grouped_helio": -1.0912,
+      "processor_grouped_kirin": -0.3468,
+      "processor_grouped_other_proc": -1.3499,
+      "processor_grouped_snapdragon": 0.7229,
+      "processor_grouped_tiger": -0.0029,
+      "processor_grouped_unisoc": -0.0118,
+      "os_grouped_android": -0.1105,
+      "os_grouped_ios": 0.1911,
+      "os_grouped_other_os": -0.0818
+    },
+    "Flagship": {
+      "rating": 0.762,
+      "num_cores": -0.0327,
+      "processor_speed": -0.0416,
+      "battery_capacity": -0.476,
+      "fast_charging_available": -1.1714,
+      "fast_charging": 0.3118,
+      "ram_capacity": -1.2331,
+      "internal_memory": 1.5401,
+      "screen_size": 0.308,
+      "refresh_rate": -0.1683,
+      "num_rear_cameras": 0.2436,
+      "num_front_cameras": -0.2554,
+      "primary_camera_rear": 0.4083,
+      "primary_camera_front": 0.2439,
+      "extended_memory_available": -0.866,
+      "extended_upto": 0.0742,
+      "has_5g": 0.9508,
+      "has_nfc": 0.3877,
+      "has_ir_blaster": -0.3227,
+      "resolution_width": 0.8663,
+      "resolution_height": 0.6421,
+      "pixel_count": -0.6555,
+      "aspect_ratio": -1.2687,
+      "ppi": 1.2673,
+      "total_cameras": 0.1752,
+      "screen_to_battery_ratio": -1.2247,
+      "ram_to_storage_ratio": -0.2711,
+      "performance_score": 2.8514,
+      "brand_grouped_apple": 1.1425,
+      "brand_grouped_asus": 2.1916,
+      "brand_grouped_google": 0.4616,
+      "brand_grouped_honor": -1.036,
+      "brand_grouped_huawei": 0.7985,
+      "brand_grouped_infinix": -0.2293,
+      "brand_grouped_iqoo": -2.1574,
+      "brand_grouped_itel": -0.0004,
+      "brand_grouped_motorola": 0.058,
+      "brand_grouped_nokia": -0.4244,
+      "brand_grouped_nubia": 0.5685,
+      "brand_grouped_oneplus": -0.1765,
+      "brand_grouped_oppo": 0.2064,
+      "brand_grouped_other_brand": 0.6488,
+      "brand_grouped_poco": -2.3727,
+      "brand_grouped_realme": -3.6447,
+      "brand_grouped_samsung": 1.3807,
+      "brand_grouped_sony": 3.1665,
+      "brand_grouped_tecno": -0.4417,
+      "brand_grouped_vivo": 0.3093,
+      "brand_grouped_xiaomi": -0.4968,
+      "processor_grouped_bionic": 0.1056,
+      "processor_grouped_dimensity": -2.7481,
+      "processor_grouped_exynos": -0.8251,
+      "processor_grouped_google": 2.0803,
+      "processor_grouped_helio": -0.2668,
+      "processor_grouped_kirin": 1.225,
+      "processor_grouped_other_proc": 1.3462,
+      "processor_grouped_snapdragon": -0.9629,
+      "processor_grouped_tiger": -0.0011,
+      "processor_grouped_unisoc": -0.0005,
+      "os_grouped_android": -1.7756,
+      "os_grouped_ios": 1.1425,
+      "os_grouped_other_os": 0.5855
+    }
+  }
+}
