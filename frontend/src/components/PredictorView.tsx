@@ -134,36 +134,36 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
       {/* Header & Status */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <div>
-          <div className="flex items-center space-x-2 text-xs font-semibold text-blue-600 tracking-wide uppercase mb-1">
+          <div className="flex items-center space-x-2 text-xs font-semibold text-amber-800 tracking-wider uppercase mb-1">
             <span>Inference Engine</span>
             <span>/</span>
             <span className="text-slate-500 font-normal">Live Specification Classifier</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-bold font-luxury text-slate-900 tracking-tight">
             Predict Smartphone Price Category
           </h1>
-          <p className="text-sm text-slate-500 mt-1 max-w-3xl">
+          <p className="text-sm text-slate-600 mt-1 max-w-3xl">
             Enter technical specifications and SmartPrice will estimate the market category with feature explainability.
           </p>
         </div>
 
         {/* Model status pill & Presets */}
         <div className="flex flex-wrap items-center gap-2">
-          <div className="px-3 py-1.5 bg-slate-900 text-white rounded-lg text-xs font-mono flex items-center space-x-2 shadow-xs">
+          <div className="px-3 py-1.5 bg-slate-900 text-white rounded-lg text-xs font-mono flex items-center space-x-2 shadow-xs border border-amber-500/20">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span className="font-semibold text-slate-200">RF-Production-v1.2</span>
             <span className="text-slate-400">|</span>
             <span className="text-slate-300">Loss: <strong className="text-white">0.048</strong></span>
             <span className="text-slate-400">|</span>
-            <span className="text-emerald-400 font-bold">F1: 0.942</span>
+            <span className="text-amber-300 font-bold">F1: 0.942</span>
           </div>
         </div>
       </div>
 
       {/* Quick Hardware Presets Bar */}
-      <div className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs flex items-center justify-between flex-wrap gap-2">
-        <div className="flex items-center space-x-2 text-xs font-semibold text-slate-600">
-          <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+      <div className="luxury-card p-3.5 flex items-center justify-between flex-wrap gap-2">
+        <div className="flex items-center space-x-2 text-xs font-semibold text-slate-700">
+          <Sparkles className="w-3.5 h-3.5 text-amber-700" />
           <span>Quick Architecture Presets:</span>
         </div>
         <div className="flex items-center space-x-2 flex-wrap">
@@ -171,14 +171,14 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
             <button
               key={key}
               onClick={() => handlePresetSelect(key)}
-              className="px-3 py-1 bg-slate-50 hover:bg-blue-50 hover:text-blue-700 hover:border-blue-200 border border-slate-200 text-slate-700 text-xs font-medium rounded-lg transition-colors"
+              className="px-3 py-1 bg-white hover:bg-amber-50 hover:text-amber-900 hover:border-amber-300 border border-[#EAE4DC] text-slate-700 text-xs font-medium rounded-lg transition-colors shadow-2xs"
             >
               {item.label}
             </button>
           ))}
           <button
             onClick={() => handlePresetSelect('premium')}
-            className="p-1.5 text-slate-400 hover:text-slate-700 rounded-lg border border-slate-200"
+            className="p-1.5 text-slate-400 hover:text-slate-700 rounded-lg border border-[#EAE4DC] bg-white shadow-2xs"
             title="Reset specs"
           >
             <RotateCcw className="w-3.5 h-3.5" />
@@ -191,13 +191,13 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
         {/* LEFT COLUMN (7 Cols): 5 Numbered Specification Sections */}
         <div className="lg:col-span-7 space-y-4">
           {/* Card 1: Performance Architecture */}
-          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+          <div className="luxury-card p-5">
+            <div className="flex items-center justify-between pb-3 border-b border-[#EAE4DC] mb-4">
               <div className="flex items-center space-x-2">
-                <Cpu className="w-4 h-4 text-blue-600" />
-                <h3 className="text-sm font-bold text-slate-900">1. Performance Architecture</h3>
+                <Cpu className="w-4 h-4 text-amber-800" />
+                <h3 className="text-sm font-bold font-luxury text-slate-900">1. Performance Architecture</h3>
               </div>
-              <span className="px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[10px] rounded-md uppercase">Core Spec</span>
+              <span className="px-2 py-0.5 bg-amber-50 text-amber-800 font-semibold text-[10px] rounded-md uppercase border border-amber-200">Core Spec</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -287,13 +287,13 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
           </div>
 
           {/* Card 2: Storage Architecture */}
-          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+          <div className="luxury-card p-5">
+            <div className="flex items-center justify-between pb-3 border-b border-[#EAE4DC] mb-4">
               <div className="flex items-center space-x-2">
-                <HardDrive className="w-4 h-4 text-blue-600" />
-                <h3 className="text-sm font-bold text-slate-900">2. Storage Architecture</h3>
+                <HardDrive className="w-4 h-4 text-amber-800" />
+                <h3 className="text-sm font-bold font-luxury text-slate-900">2. Storage Architecture</h3>
               </div>
-              <span className="px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[10px] rounded-md uppercase">UFS 4.0</span>
+              <span className="px-2 py-0.5 bg-amber-50 text-amber-800 font-semibold text-[10px] rounded-md uppercase border border-amber-200">UFS 4.0</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -304,7 +304,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                 <select
                   value={specs.internal_memory}
                   onChange={(e) => setSpecs({ ...specs, internal_memory: Number(e.target.value) })}
-                  className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                  className="w-full px-3 py-2 bg-[#FAF8F5] border border-[#DDD6CD] rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-amber-600/15 focus:border-amber-700/40 shadow-2xs"
                 >
                   <option value="64">64 GB (Budget)</option>
                   <option value="128">128 GB (Mid-tier)</option>
@@ -318,7 +318,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                 <label className="block text-xs font-bold text-slate-700 mb-1">
                   Expandable Storage Slot
                 </label>
-                <div className="flex items-center justify-between px-3.5 py-2 bg-slate-50 border border-slate-200 rounded-lg">
+                <div className="flex items-center justify-between px-3.5 py-2 bg-[#FAF8F5] border border-[#DDD6CD] rounded-lg shadow-2xs">
                   <span className="text-xs font-medium text-slate-700">MicroSD up to 1TB</span>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input
@@ -327,7 +327,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                       onChange={(e) => setSpecs({ ...specs, extended_memory_available: e.target.checked ? 1 : 0 })}
                       className="sr-only peer"
                     />
-                    <div className="w-9 h-5 bg-slate-300 peer-focus:outline-hidden rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
+                    <div className="w-9 h-5 bg-slate-300 peer-focus:outline-hidden rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-amber-700"></div>
                   </label>
                 </div>
               </div>
@@ -335,13 +335,13 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
           </div>
 
           {/* Card 3: Battery & Power Regulation */}
-          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+          <div className="luxury-card p-5">
+            <div className="flex items-center justify-between pb-3 border-b border-[#EAE4DC] mb-4">
               <div className="flex items-center space-x-2">
-                <BatteryCharging className="w-4 h-4 text-blue-600" />
-                <h3 className="text-sm font-bold text-slate-900">3. Battery & Power Regulation</h3>
+                <BatteryCharging className="w-4 h-4 text-amber-800" />
+                <h3 className="text-sm font-bold font-luxury text-slate-900">3. Battery & Power Regulation</h3>
               </div>
-              <span className="px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[10px] rounded-md uppercase">Cell Spec</span>
+              <span className="px-2 py-0.5 bg-amber-50 text-amber-800 font-semibold text-[10px] rounded-md uppercase border border-amber-200">Cell Spec</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -355,7 +355,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                     max="7000"
                     value={specs.battery_capacity}
                     onChange={(e) => setSpecs({ ...specs, battery_capacity: Number(e.target.value) })}
-                    className="w-full pl-3.5 pr-14 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                    className="w-full pl-3.5 pr-14 py-2 bg-[#FAF8F5] border border-[#DDD6CD] rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-amber-600/15 focus:border-amber-700/40 shadow-2xs"
                   />
                   <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">MAH</span>
                 </div>
@@ -363,7 +363,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
 
               <div>
                 <label className="block text-xs font-bold text-slate-700 mb-1">Fast Charging Protocol</label>
-                <div className="flex items-center justify-between px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg">
+                <div className="flex items-center justify-between px-3 py-2 bg-[#FAF8F5] border border-[#DDD6CD] rounded-lg shadow-2xs">
                   <span className="text-[11px] font-medium text-slate-700">PD / QuickCharge</span>
                   <label className="relative inline-flex items-center cursor-pointer">
                     <input
@@ -372,7 +372,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                       onChange={(e) => setSpecs({ ...specs, fast_charging_available: e.target.checked ? 1 : 0 })}
                       className="sr-only peer"
                     />
-                    <div className="w-9 h-5 bg-slate-300 peer-focus:outline-hidden rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
+                    <div className="w-9 h-5 bg-slate-300 peer-focus:outline-hidden rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-amber-700"></div>
                   </label>
                 </div>
               </div>
@@ -386,7 +386,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                     max="240"
                     value={specs.fast_charging}
                     onChange={(e) => setSpecs({ ...specs, fast_charging: Number(e.target.value) })}
-                    className="w-full pl-3.5 pr-10 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                    className="w-full pl-3.5 pr-10 py-2 bg-[#FAF8F5] border border-[#DDD6CD] rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-amber-600/15 focus:border-amber-700/40 shadow-2xs"
                   />
                   <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">W</span>
                 </div>
@@ -395,13 +395,13 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
           </div>
 
           {/* Card 4: Display Panel Specifications */}
-          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+          <div className="luxury-card p-5">
+            <div className="flex items-center justify-between pb-3 border-b border-[#EAE4DC] mb-4">
               <div className="flex items-center space-x-2">
-                <Smartphone className="w-4 h-4 text-blue-600" />
-                <h3 className="text-sm font-bold text-slate-900">4. Display Panel Specifications</h3>
+                <Smartphone className="w-4 h-4 text-amber-800" />
+                <h3 className="text-sm font-bold font-luxury text-slate-900">4. Display Panel Specifications</h3>
               </div>
-              <span className="px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[10px] rounded-md uppercase">OLED / HDR</span>
+              <span className="px-2 py-0.5 bg-amber-50 text-amber-800 font-semibold text-[10px] rounded-md uppercase border border-amber-200">OLED / HDR</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -415,7 +415,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                     max="7.5"
                     value={specs.screen_size}
                     onChange={(e) => setSpecs({ ...specs, screen_size: Number(e.target.value) })}
-                    className="w-full pl-3.5 pr-14 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                    className="w-full pl-3.5 pr-14 py-2 bg-[#FAF8F5] border border-[#DDD6CD] rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-amber-600/15 focus:border-amber-700/40 shadow-2xs"
                   />
                   <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">INCH</span>
                 </div>
@@ -429,7 +429,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                     setResolutionStandard(e.target.value);
                     setSpecs({ ...specs, resolution: e.target.value });
                   }}
-                  className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold text-slate-900 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                  className="w-full px-3 py-2 bg-[#FAF8F5] border border-[#DDD6CD] rounded-lg text-xs font-semibold text-slate-900 focus:bg-white focus:ring-2 focus:ring-amber-600/15 focus:border-amber-700/40 shadow-2xs"
                 >
                   <option value="1080 x 2400">1080 × 2400 FHD+</option>
                   <option value="1440 x 3088">1440 × 3088 QHD+</option>
@@ -448,8 +448,8 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                       onClick={() => setSpecs({ ...specs, refresh_rate: hz })}
                       className={`py-2 text-[11px] font-bold rounded-md border transition-all ${
                         specs.refresh_rate === hz
-                          ? 'bg-blue-600 text-white border-blue-600 shadow-2xs'
-                          : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                          ? 'bg-amber-700 text-white border-amber-700 shadow-2xs'
+                          : 'bg-[#FAF8F5] text-slate-700 border-[#DDD6CD] hover:bg-amber-50'
                       }`}
                     >
                       {hz}Hz
@@ -461,13 +461,13 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
           </div>
 
           {/* Card 5: Optical Modules & Modems */}
-          <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
-            <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+          <div className="luxury-card p-5">
+            <div className="flex items-center justify-between pb-3 border-b border-[#EAE4DC] mb-4">
               <div className="flex items-center space-x-2">
-                <Camera className="w-4 h-4 text-blue-600" />
-                <h3 className="text-sm font-bold text-slate-900">5. Optical Modules & Modems</h3>
+                <Camera className="w-4 h-4 text-amber-800" />
+                <h3 className="text-sm font-bold font-luxury text-slate-900">5. Optical Modules & Modems</h3>
               </div>
-              <span className="px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[10px] rounded-md uppercase">Sensor & RF</span>
+              <span className="px-2 py-0.5 bg-amber-50 text-amber-800 font-semibold text-[10px] rounded-md uppercase border border-amber-200">Sensor & RF</span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
@@ -480,7 +480,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                     max="200"
                     value={specs.primary_camera_rear}
                     onChange={(e) => setSpecs({ ...specs, primary_camera_rear: Number(e.target.value) })}
-                    className="w-full pl-3.5 pr-12 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                    className="w-full pl-3.5 pr-12 py-2 bg-[#FAF8F5] border border-[#DDD6CD] rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-amber-600/15 focus:border-amber-700/40 shadow-2xs"
                   />
                   <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">MP</span>
                 </div>
@@ -495,7 +495,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                     max="60"
                     value={specs.primary_camera_front}
                     onChange={(e) => setSpecs({ ...specs, primary_camera_front: Number(e.target.value) })}
-                    className="w-full pl-3.5 pr-12 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                    className="w-full pl-3.5 pr-12 py-2 bg-[#FAF8F5] border border-[#DDD6CD] rounded-lg text-xs font-bold text-slate-900 focus:bg-white focus:ring-2 focus:ring-amber-600/15 focus:border-amber-700/40 shadow-2xs"
                   />
                   <span className="absolute right-3.5 top-1/2 -translate-y-1/2 text-xs font-bold text-slate-400">MP</span>
                 </div>
@@ -512,7 +512,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                     else if (e.target.value === '2_rear_1_front') setSpecs({ ...specs, num_rear_cameras: 2, num_front_cameras: 1 });
                     else setSpecs({ ...specs, num_rear_cameras: 1, num_front_cameras: 1 });
                   }}
-                  className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs font-semibold text-slate-900 focus:bg-white focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500"
+                  className="w-full px-3 py-2 bg-[#FAF8F5] border border-[#DDD6CD] rounded-lg text-xs font-semibold text-slate-900 focus:bg-white focus:ring-2 focus:ring-amber-600/15 focus:border-amber-700/40 shadow-2xs"
                 >
                   <option value="4_rear_1_front">4 Rear / 1 Front (Quad)</option>
                   <option value="3_rear_1_front">3 Rear / 1 Front (Triple)</option>
@@ -524,9 +524,9 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
 
             {/* Toggle checkboxes for 5G & NFC */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-              <label className="flex items-center justify-between p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <label className="flex items-center justify-between p-3 rounded-lg border border-[#EAE4DC] bg-[#FAF8F5] hover:bg-white cursor-pointer transition-colors shadow-2xs">
                 <div className="flex items-center space-x-3">
-                  <div className="p-1.5 bg-blue-100 text-blue-700 rounded-md">
+                  <div className="p-1.5 bg-blue-100 text-blue-800 rounded-md">
                     <Radio className="w-3.5 h-3.5" />
                   </div>
                   <div>
@@ -538,13 +538,13 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                   type="checkbox"
                   checked={specs.has_5g}
                   onChange={(e) => setSpecs({ ...specs, has_5g: e.target.checked })}
-                  className="w-4 h-4 text-blue-600 rounded-sm border-slate-300 focus:ring-blue-500"
+                  className="w-4 h-4 text-amber-700 rounded-sm border-[#DDD6CD] focus:ring-amber-600"
                 />
               </label>
 
-              <label className="flex items-center justify-between p-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100/70 cursor-pointer transition-colors">
+              <label className="flex items-center justify-between p-3 rounded-lg border border-[#EAE4DC] bg-[#FAF8F5] hover:bg-white cursor-pointer transition-colors shadow-2xs">
                 <div className="flex items-center space-x-3">
-                  <div className="p-1.5 bg-indigo-100 text-indigo-700 rounded-md">
+                  <div className="p-1.5 bg-amber-100 text-amber-800 rounded-md">
                     <Radio className="w-3.5 h-3.5" />
                   </div>
                   <div>
@@ -556,14 +556,14 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                   type="checkbox"
                   checked={specs.has_nfc}
                   onChange={(e) => setSpecs({ ...specs, has_nfc: e.target.checked })}
-                  className="w-4 h-4 text-blue-600 rounded-sm border-slate-300 focus:ring-blue-500"
+                  className="w-4 h-4 text-amber-700 rounded-sm border-[#DDD6CD] focus:ring-amber-600"
                 />
               </label>
             </div>
           </div>
 
           {/* Predict Action Bar */}
-          <div className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div className="luxury-card p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="flex items-center space-x-2 text-xs text-slate-600">
               <Check className="w-4 h-4 text-emerald-600 shrink-0" />
               <div className="flex items-center space-x-1.5">
@@ -571,7 +571,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                 <select
                   value={selectedModel}
                   onChange={(e) => setSelectedModel(e.target.value)}
-                  className="px-2 py-1 bg-slate-50 border border-slate-200 rounded-md text-xs font-bold text-slate-900 focus:outline-hidden"
+                  className="px-2 py-1 bg-[#FAF8F5] border border-[#DDD6CD] rounded-md text-xs font-bold text-slate-900 focus:outline-hidden"
                 >
                   <option value="champion">Random Forest (Champion 🏆)</option>
                   <option value="svm">Support Vector Machine</option>
@@ -586,10 +586,10 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                 <button
                   type="button"
                   onClick={() => onCompareWithSpecs(specs)}
-                  className="px-3.5 py-2.5 bg-slate-50 hover:bg-slate-100 text-slate-700 font-semibold text-xs rounded-lg border border-slate-200 transition-all flex items-center space-x-1.5"
+                  className="px-3.5 py-2.5 bg-[#FAF8F5] hover:bg-white text-slate-700 font-semibold text-xs rounded-lg border border-[#EAE4DC] transition-all flex items-center space-x-1.5 shadow-2xs"
                   title="Compare across all 4 models in Model Lab"
                 >
-                  <FlaskConical className="w-3.5 h-3.5 text-blue-600" />
+                  <FlaskConical className="w-3.5 h-3.5 text-amber-800" />
                   <span>Benchmark</span>
                 </button>
               )}
@@ -597,7 +597,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                 type="button"
                 onClick={handlePredict}
                 disabled={loading}
-                className="w-full sm:w-auto px-6 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-bold text-xs rounded-lg shadow-sm hover:shadow transition-all flex items-center justify-center space-x-2"
+                className="w-full sm:w-auto px-6 py-2.5 bg-gradient-to-r from-blue-700 via-indigo-800 to-blue-900 hover:brightness-110 disabled:opacity-50 text-white font-bold text-xs rounded-lg shadow-sm hover:shadow-md transition-all flex items-center justify-center space-x-2"
               >
                 {loading ? (
                   <>
@@ -606,7 +606,7 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
                   </>
                 ) : (
                   <>
-                    <Cpu className="w-4 h-4" />
+                    <Cpu className="w-4 h-4 text-amber-300" />
                     <span>Predict Price Category</span>
                   </>
                 )}
@@ -617,14 +617,14 @@ export const PredictorView: React.FC<PredictorViewProps> = ({ onCompareWithSpecs
 
         {/* RIGHT COLUMN (5 Cols): Classification Outcome & Feature Explainability */}
         <div className="lg:col-span-5 space-y-4">
-          <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+          <div className="luxury-card p-6">
             {/* Outcome Header */}
-            <div className="flex items-center justify-between pb-4 border-b border-slate-100">
+            <div className="flex items-center justify-between pb-4 border-b border-[#EAE4DC]">
               <div className="flex items-center space-x-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-blue-600 animate-ping"></span>
+                <span className="w-2.5 h-2.5 rounded-full bg-amber-600 animate-ping"></span>
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-700">Classification Outcome</span>
               </div>
-              <span className="px-2 py-0.5 bg-blue-50 text-blue-700 font-bold text-[10px] rounded-md border border-blue-100">
+              <span className="px-2 py-0.5 bg-amber-50 text-amber-800 font-bold text-[10px] rounded-md border border-amber-200">
                 REAL-TIME INFERRED
               </span>
             </div>

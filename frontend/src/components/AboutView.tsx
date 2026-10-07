@@ -31,10 +31,10 @@ export const AboutView: React.FC = () => {
     <div className="space-y-6">
       
       {/* Header */}
-      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-2">
+      <div className="luxury-card p-6 space-y-2">
         <div className="flex items-center space-x-2">
-          <BookOpen className="w-5 h-5 text-indigo-600" />
-          <h1 className="text-lg font-bold text-slate-900">System Architecture & Viva Voce Guide</h1>
+          <BookOpen className="w-5 h-5 text-amber-800" />
+          <h1 className="text-lg font-bold font-luxury text-slate-900">System Architecture & Viva Voce Guide</h1>
         </div>
         <p className="text-xs text-slate-500">
           Comprehensive project methodology, mathematical formulations, and frequently asked Viva Voce examination questions.
@@ -45,12 +45,12 @@ export const AboutView: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         {/* ML Core */}
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
-          <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-600">
+        <div className="luxury-card p-6 space-y-4">
+          <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-800">
             <Cpu className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-sm font-bold text-slate-900">1. ML Core & Preprocessing</h3>
+            <h3 className="text-sm font-bold font-luxury text-slate-900">1. ML Core & Preprocessing</h3>
             <p className="text-xs text-slate-500 mt-1">
               Zero-leakage Scikit-learn ColumnTransformer with median imputation, standard scaling, and one-hot encoding across 62 dimensions.
             </p>
@@ -72,12 +72,12 @@ export const AboutView: React.FC = () => {
         </div>
 
         {/* FastAPI Backend */}
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
-          <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
+        <div className="luxury-card p-6 space-y-4">
+          <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-700">
             <Server className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-sm font-bold text-slate-900">2. FastAPI Backend Engine</h3>
+            <h3 className="text-sm font-bold font-luxury text-slate-900">2. FastAPI Backend Engine</h3>
             <p className="text-xs text-slate-500 mt-1">
               High-performance asynchronous REST API serving real-time single, batch, and 4-model consensus predictions with sub-10ms latency.
             </p>
@@ -99,14 +99,14 @@ export const AboutView: React.FC = () => {
         </div>
 
         {/* React UI */}
-        <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
-          <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600">
+        <div className="luxury-card p-6 space-y-4">
+          <div className="w-10 h-10 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-800">
             <Code2 className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-sm font-bold text-slate-900">3. Modern Web Dashboard</h3>
+            <h3 className="text-sm font-bold font-luxury text-slate-900">3. Modern Web Dashboard</h3>
             <p className="text-xs text-slate-500 mt-1">
-              Clean React 19 + TypeScript + Tailwind design system featuring real-time hardware calculation HUDs and interactive lab views.
+              Refined React 19 + TypeScript system featuring real-time hardware calculation HUDs, luxury typography, and interactive lab views.
             </p>
           </div>
           <ul className="space-y-2 text-xs text-slate-700">
@@ -120,7 +120,7 @@ export const AboutView: React.FC = () => {
             </li>
             <li className="flex items-center space-x-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-              <span>Enterprise Light Theme</span>
+              <span>Warm Luxury Shaded Theme</span>
             </li>
           </ul>
         </div>
@@ -128,43 +128,43 @@ export const AboutView: React.FC = () => {
       </div>
 
       {/* Target Price Boundary Breakdown */}
-      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
-        <div className="flex items-center space-x-2 text-sm font-bold text-slate-900 pb-2 border-b border-slate-100">
-          <Award className="w-4 h-4 text-indigo-600" />
+      <div className="luxury-card p-6 space-y-4">
+        <div className="flex items-center space-x-2 text-sm font-bold font-luxury text-slate-900 pb-2 border-b border-[#EAE4DC]">
+          <Award className="w-4 h-4 text-amber-800" />
           <span>Domain Classification Boundaries</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
-          <div className="p-4 rounded-xl bg-blue-50 border border-blue-200 space-y-1">
-            <span className="font-bold text-blue-800">Tier 0: Budget</span>
-            <div className="text-slate-900 font-bold">Price $\le$ ₹15,000</div>
+          <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#EAE4DC] space-y-1">
+            <span className="font-bold text-emerald-800">Tier 0: Budget</span>
+            <div className="text-slate-900 font-bold font-luxury text-sm">Price ≤ ₹15,000</div>
             <p className="text-slate-600 text-[11px]">Utility phones, Helio/Unisoc processors, 3-4GB RAM, 720p HD+ displays.</p>
           </div>
 
-          <div className="p-4 rounded-xl bg-emerald-50 border border-emerald-200 space-y-1">
-            <span className="font-bold text-emerald-800">Tier 1: Mid-Range</span>
-            <div className="text-slate-900 font-bold">₹15,001 – ₹30,000</div>
+          <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#EAE4DC] space-y-1">
+            <span className="font-bold text-blue-800">Tier 1: Mid-Range</span>
+            <div className="text-slate-900 font-bold font-luxury text-sm">₹15,001 – ₹30,000</div>
             <p className="text-slate-600 text-[11px]">Mass-market 5G devices, Snapdragon 6/7 series, 6-8GB RAM, 120Hz FHD+.</p>
           </div>
 
-          <div className="p-4 rounded-xl bg-amber-50 border border-amber-200 space-y-1">
+          <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#EAE4DC] space-y-1">
             <span className="font-bold text-amber-800">Tier 2: Premium</span>
-            <div className="text-slate-900 font-bold">₹30,001 – ₹50,000</div>
+            <div className="text-slate-900 font-bold font-luxury text-sm">₹30,001 – ₹50,000</div>
             <p className="text-slate-600 text-[11px]">Flagship killers, Dimensity 8000/9000, 67W-100W fast charging.</p>
           </div>
 
-          <div className="p-4 rounded-xl bg-red-50 border border-red-200 space-y-1">
-            <span className="font-bold text-red-800">Tier 3: Flagship</span>
-            <div className="text-slate-900 font-bold">Price &gt; ₹50,000</div>
+          <div className="p-4 rounded-xl bg-[#FAF8F5] border border-[#EAE4DC] space-y-1">
+            <span className="font-bold text-rose-800">Tier 3: Flagship</span>
+            <div className="text-slate-900 font-bold font-luxury text-sm">Price &gt; ₹50,000</div>
             <p className="text-slate-600 text-[11px]">Ultra flagships, Apple Bionic, 200MP sensors, QHD+ displays, 12GB+ RAM.</p>
           </div>
         </div>
       </div>
 
       {/* Frequently Asked Viva Voce Questions */}
-      <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-4">
-        <div className="flex items-center space-x-2 text-sm font-bold text-slate-900 pb-2 border-b border-slate-100">
-          <HelpCircle className="w-4 h-4 text-indigo-600" />
+      <div className="luxury-card p-6 space-y-4">
+        <div className="flex items-center space-x-2 text-sm font-bold font-luxury text-slate-900 pb-2 border-b border-[#EAE4DC]">
+          <HelpCircle className="w-4 h-4 text-amber-800" />
           <span>Frequently Asked Viva Voce Questions & Answers</span>
         </div>
 
@@ -174,21 +174,21 @@ export const AboutView: React.FC = () => {
             return (
               <div 
                 key={index} 
-                className="border border-slate-200 rounded-xl overflow-hidden transition-all"
+                className="border border-[#EAE4DC] rounded-xl overflow-hidden transition-all bg-[#FAF8F5]"
               >
                 <button
                   onClick={() => setOpenFaq(isOpen ? null : index)}
-                  className="w-full text-left p-4 bg-slate-50 hover:bg-slate-100/80 flex items-center justify-between font-bold text-xs text-slate-800 cursor-pointer"
+                  className="w-full text-left p-4 hover:bg-[#F3EDE3] flex items-center justify-between font-bold text-xs text-slate-800 cursor-pointer transition-colors"
                 >
                   <span className="flex items-center space-x-2">
-                    <span className="text-indigo-600 font-mono">Q{index + 1}:</span>
-                    <span>{faq.q}</span>
+                    <span className="text-amber-800 font-mono">Q{index + 1}:</span>
+                    <span className="font-luxury text-sm font-semibold">{faq.q}</span>
                   </span>
                   {isOpen ? <ChevronUp className="w-4 h-4 text-slate-500" /> : <ChevronDown className="w-4 h-4 text-slate-500" />}
                 </button>
                 {isOpen && (
-                  <div className="p-4 bg-white text-xs text-slate-600 leading-relaxed border-t border-slate-100">
-                    <strong className="text-indigo-900 font-semibold">Answer: </strong>
+                  <div className="p-4 bg-white text-xs text-slate-600 leading-relaxed border-t border-[#EAE4DC]">
+                    <strong className="text-amber-900 font-semibold font-serif">Answer: </strong>
                     {faq.a}
                   </div>
                 )}

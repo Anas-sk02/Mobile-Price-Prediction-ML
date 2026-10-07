@@ -88,31 +88,31 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
       {/* Top Banner & Title */}
       <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
         <div>
-          <div className="flex items-center space-x-2 text-xs font-semibold text-blue-600 tracking-wide uppercase mb-1">
+          <div className="flex items-center space-x-2 text-xs font-semibold text-amber-800 tracking-wider uppercase mb-1">
             <span>Telemetry & Benchmarks</span>
             <span>•</span>
             <span className="text-slate-500 font-normal">Validated Production Split (v1.2.4)</span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 tracking-tight">
+          <h1 className="text-2xl sm:text-3xl font-bold font-luxury text-slate-900 tracking-tight">
             Smartphone price intelligence from technical specifications.
           </h1>
-          <p className="text-sm text-slate-500 mt-1 max-w-3xl">
+          <p className="text-sm text-slate-600 mt-1 max-w-3xl">
             Compare model performance, explore the dataset, and predict price categories across quantitative micro-architectures.
           </p>
         </div>
         <div className="flex items-center space-x-3 shrink-0">
           <button
             onClick={() => setShowAuditModal(!showAuditModal)}
-            className="px-3.5 py-2 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 text-xs font-semibold rounded-lg shadow-2xs transition-all flex items-center space-x-2"
+            className="px-3.5 py-2 bg-white border border-[#EAE4DC] hover:bg-[#FAF8F5] text-slate-700 text-xs font-semibold rounded-lg shadow-2xs transition-all flex items-center space-x-2"
           >
-            <Clock className="w-3.5 h-3.5 text-slate-400" />
+            <Clock className="w-3.5 h-3.5 text-amber-800/60" />
             <span>Audit Log</span>
           </button>
           <button
             onClick={() => onNavigate('predict')}
-            className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded-lg shadow-sm hover:shadow-md transition-all flex items-center space-x-2"
+            className="px-4 py-2 bg-gradient-to-r from-blue-700 to-indigo-800 hover:from-blue-800 hover:to-indigo-900 text-white text-xs font-semibold rounded-lg shadow-sm hover:shadow-md transition-all flex items-center space-x-2"
           >
-            <Zap className="w-3.5 h-3.5" />
+            <Zap className="w-3.5 h-3.5 text-amber-300" />
             <span>Quick Test Classifier</span>
           </button>
         </div>
@@ -122,7 +122,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
       {showAuditModal && (
         <div className="bg-slate-900 text-slate-100 p-4 rounded-xl shadow-lg border border-slate-800 text-xs animate-in fade-in duration-200">
           <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-800">
-            <span className="font-mono font-semibold text-blue-400">AUDIT_RECORD_SHA256: 8f9b2d38a0...</span>
+            <span className="font-mono font-semibold text-amber-400">AUDIT_RECORD_SHA256: 8f9b2d38a0...</span>
             <button onClick={() => setShowAuditModal(false)} className="text-slate-400 hover:text-white text-xs">✕ Close</button>
           </div>
           <div className="font-mono space-y-1 text-slate-300">
@@ -136,62 +136,62 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
       {/* 4 Stat KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Metric 1 */}
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs hover:shadow-sm transition-shadow">
+        <div className="luxury-card p-5">
           <div className="flex items-center justify-between text-slate-400 mb-3">
-            <span className="text-xs font-bold tracking-wider text-slate-500 uppercase">Dataset Volume</span>
-            <div className="p-2 bg-blue-50 text-blue-600 rounded-lg">
+            <span className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">Dataset Volume</span>
+            <div className="p-2 bg-amber-50 text-amber-800 rounded-lg border border-amber-200/60">
               <Database className="w-4 h-4" />
             </div>
           </div>
-          <div className="text-3xl font-extrabold text-slate-900 tracking-tight">980</div>
+          <div className="text-3xl font-extrabold font-luxury text-slate-900 tracking-tight">980</div>
           <div className="flex items-center justify-between mt-3 text-xs">
             <span className="text-slate-500">Verified clean samples</span>
-            <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 font-semibold rounded-md border border-emerald-100">+100% verified</span>
+            <span className="px-2 py-0.5 bg-emerald-50 text-emerald-800 font-semibold rounded-md border border-emerald-200 text-[10px]">+100% verified</span>
           </div>
         </div>
 
         {/* Metric 2 */}
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs hover:shadow-sm transition-shadow">
+        <div className="luxury-card p-5">
           <div className="flex items-center justify-between text-slate-400 mb-3">
-            <span className="text-xs font-bold tracking-wider text-slate-500 uppercase">Feature Matrix</span>
-            <div className="p-2 bg-indigo-50 text-indigo-600 rounded-lg">
+            <span className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">Feature Matrix</span>
+            <div className="p-2 bg-blue-50 text-blue-700 rounded-lg border border-blue-200/60">
               <Sliders className="w-4 h-4" />
             </div>
           </div>
-          <div className="text-3xl font-extrabold text-slate-900 tracking-tight">21</div>
+          <div className="text-3xl font-extrabold font-luxury text-slate-900 tracking-tight">21</div>
           <div className="flex items-center justify-between mt-3 text-xs">
             <span className="text-slate-500">Numeric & categorical</span>
-            <span className="px-2 py-0.5 bg-indigo-50 text-indigo-700 font-semibold rounded-md border border-indigo-100">PCA ready</span>
+            <span className="px-2 py-0.5 bg-blue-50 text-blue-800 font-semibold rounded-md border border-blue-200 text-[10px]">PCA ready</span>
           </div>
         </div>
 
         {/* Metric 3 */}
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs hover:shadow-sm transition-shadow">
+        <div className="luxury-card p-5">
           <div className="flex items-center justify-between text-slate-400 mb-3">
-            <span className="text-xs font-bold tracking-wider text-slate-500 uppercase">Trained Classifiers</span>
-            <div className="p-2 bg-purple-50 text-purple-600 rounded-lg">
+            <span className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">Trained Classifiers</span>
+            <div className="p-2 bg-purple-50 text-purple-700 rounded-lg border border-purple-200/60">
               <Award className="w-4 h-4" />
             </div>
           </div>
-          <div className="text-3xl font-extrabold text-slate-900 tracking-tight">4</div>
+          <div className="text-3xl font-extrabold font-luxury text-slate-900 tracking-tight">4</div>
           <div className="flex items-center justify-between mt-3 text-xs">
             <span className="text-slate-500">LR, KNN, RF, SVM</span>
-            <span className="px-2 py-0.5 bg-blue-50 text-blue-700 font-semibold rounded-md border border-blue-100">5-Fold CV</span>
+            <span className="px-2 py-0.5 bg-amber-50 text-amber-800 font-semibold rounded-md border border-amber-200 text-[10px]">5-Fold CV</span>
           </div>
         </div>
 
         {/* Metric 4 */}
-        <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs hover:shadow-sm transition-shadow">
+        <div className="luxury-card p-5">
           <div className="flex items-center justify-between text-slate-400 mb-3">
-            <span className="text-xs font-bold tracking-wider text-slate-500 uppercase">Best Model F1 Score</span>
-            <div className="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
+            <span className="text-[10px] font-bold tracking-widest text-slate-500 uppercase">Best Model F1 Score</span>
+            <div className="p-2 bg-emerald-50 text-emerald-700 rounded-lg border border-emerald-200/60">
               <Sparkles className="w-4 h-4" />
             </div>
           </div>
-          <div className="text-3xl font-extrabold text-slate-900 tracking-tight text-emerald-600">0.945</div>
+          <div className="text-3xl font-extrabold font-luxury text-emerald-700 tracking-tight">0.945</div>
           <div className="flex items-center justify-between mt-3 text-xs">
-            <span className="text-slate-500 font-medium">Random Forest</span>
-            <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 font-semibold rounded-md border border-emerald-100">+6.5% vs baseline</span>
+            <span className="text-slate-600 font-medium">Random Forest</span>
+            <span className="px-2 py-0.5 bg-emerald-50 text-emerald-800 font-semibold rounded-md border border-emerald-200 text-[10px]">+6.5% vs baseline</span>
           </div>
         </div>
       </div>
@@ -199,21 +199,21 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
       {/* Row 2: Model Performance Matrix & Category Split */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Model Performance Matrix (2 Cols) */}
-        <div className="lg:col-span-2 bg-white p-6 rounded-xl border border-slate-200 shadow-2xs flex flex-col justify-between">
+        <div className="lg:col-span-2 luxury-card p-6 flex flex-col justify-between">
           <div>
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-100 gap-2">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-[#EAE4DC] gap-2">
               <div>
                 <div className="flex items-center space-x-2">
-                  <h3 className="text-base font-bold text-slate-900">Model Performance Matrix</h3>
-                  <span className="px-2 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-semibold rounded-md">Multi-class 4-way evaluation</span>
+                  <h3 className="text-base font-bold font-luxury text-slate-900">Model Performance Matrix</h3>
+                  <span className="px-2 py-0.5 bg-amber-50 text-amber-800 text-[10px] font-semibold rounded-md border border-amber-200">Multi-class 4-way evaluation</span>
                 </div>
                 <p className="text-xs text-slate-500 mt-0.5">Weighted metrics across all tested smartphone price tiers.</p>
               </div>
               <div className="flex items-center space-x-3 text-xs text-slate-600">
-                <div className="flex items-center space-x-1.5"><span className="w-2.5 h-2.5 rounded-xs bg-blue-600"></span><span>Acc</span></div>
-                <div className="flex items-center space-x-1.5"><span className="w-2.5 h-2.5 rounded-xs bg-blue-400"></span><span>Prec</span></div>
-                <div className="flex items-center space-x-1.5"><span className="w-2.5 h-2.5 rounded-xs bg-indigo-200"></span><span>Rec</span></div>
-                <div className="flex items-center space-x-1.5"><span className="w-2.5 h-2.5 rounded-xs bg-emerald-500"></span><span>F1</span></div>
+                <div className="flex items-center space-x-1.5"><span className="w-2.5 h-2.5 rounded-xs bg-blue-700"></span><span>Acc</span></div>
+                <div className="flex items-center space-x-1.5"><span className="w-2.5 h-2.5 rounded-xs bg-blue-500"></span><span>Prec</span></div>
+                <div className="flex items-center space-x-1.5"><span className="w-2.5 h-2.5 rounded-xs bg-indigo-300"></span><span>Rec</span></div>
+                <div className="flex items-center space-x-1.5"><span className="w-2.5 h-2.5 rounded-xs bg-emerald-600"></span><span>F1</span></div>
               </div>
             </div>
 
@@ -224,21 +224,21 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
                 <div className="flex items-center justify-between text-xs mb-1.5">
                   <div className="flex items-center space-x-2">
                     <span className="font-bold text-slate-900">Random Forest Classifier</span>
-                    <span className="px-1.5 py-0.5 bg-blue-600 text-white font-bold text-[9px] rounded-xs uppercase">Top Pick</span>
+                    <span className="px-1.5 py-0.5 bg-amber-700 text-white font-bold text-[9px] rounded-xs uppercase">Top Pick</span>
                   </div>
                   <span className="font-mono font-bold text-slate-700">F1: 0.945 | Acc: 94.8%</span>
                 </div>
                 <div className="grid grid-cols-4 gap-1.5 h-3">
-                  <div className="bg-blue-600 rounded-xs h-full" style={{ width: '94.8%' }}></div>
-                  <div className="bg-blue-400 rounded-xs h-full" style={{ width: '94.2%' }}></div>
+                  <div className="bg-blue-700 rounded-xs h-full" style={{ width: '94.8%' }}></div>
+                  <div className="bg-blue-500 rounded-xs h-full" style={{ width: '94.2%' }}></div>
                   <div className="bg-indigo-300 rounded-xs h-full" style={{ width: '94.9%' }}></div>
-                  <div className="bg-emerald-500 rounded-xs h-full" style={{ width: '94.5%' }}></div>
+                  <div className="bg-emerald-600 rounded-xs h-full" style={{ width: '94.5%' }}></div>
                 </div>
                 <div className="flex justify-between text-[10px] font-mono text-slate-400 mt-1">
                   <span>94.8%</span>
                   <span>94.2%</span>
                   <span>94.9%</span>
-                  <span className="font-bold text-emerald-600">0.945</span>
+                  <span className="font-bold text-emerald-700">0.945</span>
                 </div>
               </div>
 
@@ -249,10 +249,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
                   <span className="font-mono text-xs text-slate-600">F1: 0.912 | Acc: 91.5%</span>
                 </div>
                 <div className="grid grid-cols-4 gap-1.5 h-3">
-                  <div className="bg-blue-600 rounded-xs h-full" style={{ width: '91.5%' }}></div>
-                  <div className="bg-blue-400 rounded-xs h-full" style={{ width: '90.8%' }}></div>
+                  <div className="bg-blue-700 rounded-xs h-full" style={{ width: '91.5%' }}></div>
+                  <div className="bg-blue-500 rounded-xs h-full" style={{ width: '90.8%' }}></div>
                   <div className="bg-indigo-300 rounded-xs h-full" style={{ width: '91.6%' }}></div>
-                  <div className="bg-emerald-500 rounded-xs h-full" style={{ width: '91.2%' }}></div>
+                  <div className="bg-emerald-600 rounded-xs h-full" style={{ width: '91.2%' }}></div>
                 </div>
                 <div className="flex justify-between text-[10px] font-mono text-slate-400 mt-1">
                   <span>91.5%</span>
@@ -269,10 +269,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
                   <span className="font-mono text-xs text-slate-600">F1: 0.880 | Acc: 88.2%</span>
                 </div>
                 <div className="grid grid-cols-4 gap-1.5 h-3">
-                  <div className="bg-blue-600 rounded-xs h-full" style={{ width: '88.2%' }}></div>
-                  <div className="bg-blue-400 rounded-xs h-full" style={{ width: '87.5%' }}></div>
+                  <div className="bg-blue-700 rounded-xs h-full" style={{ width: '88.2%' }}></div>
+                  <div className="bg-blue-500 rounded-xs h-full" style={{ width: '87.5%' }}></div>
                   <div className="bg-indigo-300 rounded-xs h-full" style={{ width: '88.6%' }}></div>
-                  <div className="bg-emerald-500 rounded-xs h-full" style={{ width: '88.0%' }}></div>
+                  <div className="bg-emerald-600 rounded-xs h-full" style={{ width: '88.0%' }}></div>
                 </div>
                 <div className="flex justify-between text-[10px] font-mono text-slate-400 mt-1">
                   <span>88.2%</span>
@@ -289,10 +289,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
                   <span className="font-mono text-xs text-slate-600">F1: 0.835 | Acc: 84.1%</span>
                 </div>
                 <div className="grid grid-cols-4 gap-1.5 h-3">
-                  <div className="bg-blue-600 rounded-xs h-full" style={{ width: '84.1%' }}></div>
-                  <div className="bg-blue-400 rounded-xs h-full" style={{ width: '83.1%' }}></div>
+                  <div className="bg-blue-700 rounded-xs h-full" style={{ width: '84.1%' }}></div>
+                  <div className="bg-blue-500 rounded-xs h-full" style={{ width: '83.1%' }}></div>
                   <div className="bg-indigo-300 rounded-xs h-full" style={{ width: '84.3%' }}></div>
-                  <div className="bg-emerald-500 rounded-xs h-full" style={{ width: '83.5%' }}></div>
+                  <div className="bg-emerald-600 rounded-xs h-full" style={{ width: '83.5%' }}></div>
                 </div>
                 <div className="flex justify-between text-[10px] font-mono text-slate-400 mt-1">
                   <span>84.1%</span>
@@ -304,11 +304,11 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
             </div>
           </div>
 
-          <div className="flex items-center justify-between pt-4 mt-4 border-t border-slate-100 text-xs text-slate-500">
+          <div className="flex items-center justify-between pt-4 mt-4 border-t border-[#EAE4DC] text-xs text-slate-500">
             <span>Cross-validation method: Stratified 5-Fold</span>
             <button
               onClick={() => onNavigate('model-lab')}
-              className="text-blue-600 hover:text-blue-700 font-semibold flex items-center space-x-1"
+              className="text-amber-800 hover:text-amber-900 font-semibold flex items-center space-x-1"
             >
               <span>Explore Hyperparameters</span>
               <ArrowRight className="w-3.5 h-3.5" />
@@ -317,47 +317,47 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
         </div>
 
         {/* Category Split (1 Col) */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-2xs flex flex-col justify-between">
+        <div className="luxury-card p-6 flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-              <h3 className="text-base font-bold text-slate-900">Category Split</h3>
+            <div className="flex items-center justify-between pb-3 border-b border-[#EAE4DC]">
+              <h3 className="text-base font-bold font-luxury text-slate-900">Category Split</h3>
               <span className="text-xs font-mono font-semibold text-slate-400">N=980</span>
             </div>
             <p className="text-xs text-slate-500 mt-1">Target variable class balanced ratio.</p>
 
             {/* Donut Chart Visual Representation */}
             <div className="py-6 flex flex-col items-center justify-center relative">
-              <div className="w-36 h-36 rounded-full border-8 border-blue-600 border-t-emerald-500 border-r-amber-500 border-b-purple-600 flex items-center justify-center flex-col shadow-inner">
+              <div className="w-36 h-36 rounded-full border-8 border-blue-700 border-t-emerald-600 border-r-amber-500 border-b-purple-700 flex items-center justify-center flex-col shadow-inner">
                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Balanced</span>
-                <span className="text-xl font-extrabold text-slate-900 leading-none mt-0.5">4 Classes</span>
+                <span className="text-xl font-extrabold font-luxury text-slate-900 leading-none mt-0.5">4 Classes</span>
               </div>
             </div>
 
             {/* Legend Grid */}
             <div className="grid grid-cols-2 gap-2 text-xs pt-2">
-              <div className="flex items-center space-x-2 p-2 rounded-lg bg-slate-50">
-                <span className="w-3 h-3 rounded-full bg-blue-600 shrink-0"></span>
+              <div className="flex items-center space-x-2 p-2 rounded-lg bg-[#FAF8F5] border border-[#EAE4DC]">
+                <span className="w-3 h-3 rounded-full bg-blue-700 shrink-0"></span>
                 <div>
                   <div className="font-bold text-slate-800">245</div>
                   <div className="text-[10px] text-slate-500">Budget (25.0%)</div>
                 </div>
               </div>
-              <div className="flex items-center space-x-2 p-2 rounded-lg bg-slate-50">
+              <div className="flex items-center space-x-2 p-2 rounded-lg bg-[#FAF8F5] border border-[#EAE4DC]">
                 <span className="w-3 h-3 rounded-full bg-amber-500 shrink-0"></span>
                 <div>
                   <div className="font-bold text-slate-800">310</div>
                   <div className="text-[10px] text-slate-500">Mid-Range (31.6%)</div>
                 </div>
               </div>
-              <div className="flex items-center space-x-2 p-2 rounded-lg bg-slate-50">
-                <span className="w-3 h-3 rounded-full bg-purple-600 shrink-0"></span>
+              <div className="flex items-center space-x-2 p-2 rounded-lg bg-[#FAF8F5] border border-[#EAE4DC]">
+                <span className="w-3 h-3 rounded-full bg-purple-700 shrink-0"></span>
                 <div>
                   <div className="font-bold text-slate-800">285</div>
                   <div className="text-[10px] text-slate-500">Premium (29.1%)</div>
                 </div>
               </div>
-              <div className="flex items-center space-x-2 p-2 rounded-lg bg-slate-50">
-                <span className="w-3 h-3 rounded-full bg-emerald-500 shrink-0"></span>
+              <div className="flex items-center space-x-2 p-2 rounded-lg bg-[#FAF8F5] border border-[#EAE4DC]">
+                <span className="w-3 h-3 rounded-full bg-emerald-600 shrink-0"></span>
                 <div>
                   <div className="font-bold text-slate-800">140</div>
                   <div className="text-[10px] text-slate-500">Flagship (14.3%)</div>
@@ -371,10 +371,10 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
       {/* Row 3: Price Spread Histogram & Feature Importance */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Price Spread Histogram */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-2xs">
-          <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+        <div className="luxury-card p-6">
+          <div className="flex items-center justify-between pb-3 border-b border-[#EAE4DC]">
             <div>
-              <h3 className="text-base font-bold text-slate-900">Price Spread Histogram</h3>
+              <h3 className="text-base font-bold font-luxury text-slate-900">Price Spread Histogram</h3>
               <p className="text-xs text-slate-500 mt-0.5">Continuous distribution density across hardware tiers.</p>
             </div>
             <span className="text-xs font-mono font-semibold text-slate-500">USD Buckets ($)</span>
@@ -384,110 +384,110 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
           <div className="h-44 pt-6 pb-2 flex items-end justify-between gap-3 px-2">
             <div className="flex-1 flex flex-col items-center">
               <span className="text-[11px] font-mono text-slate-500 mb-1">210</span>
-              <div className="w-full bg-slate-200 rounded-t-md h-24 transition-all hover:bg-slate-300"></div>
+              <div className="w-full bg-[#EAE4DC] rounded-t-md h-24 transition-all hover:bg-slate-300"></div>
               <span className="text-[10px] font-medium text-slate-500 mt-2">$100–300</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
-              <span className="text-[10px] font-bold text-blue-600 bg-blue-50 px-1.5 py-0.5 rounded-md mb-1">Peak 345</span>
-              <div className="w-full bg-blue-600 rounded-t-md h-36 transition-all hover:bg-blue-700 shadow-xs"></div>
-              <span className="text-[10px] font-bold text-blue-700 mt-2">$300–500</span>
+              <span className="text-[10px] font-bold text-amber-900 bg-amber-50 px-1.5 py-0.5 rounded-md border border-amber-200 mb-1">Peak 345</span>
+              <div className="w-full bg-gradient-to-t from-blue-700 to-indigo-700 rounded-t-md h-36 transition-all hover:brightness-110 shadow-xs"></div>
+              <span className="text-[10px] font-bold text-blue-900 mt-2">$300–500</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <span className="text-[11px] font-mono text-slate-500 mb-1">230</span>
-              <div className="w-full bg-slate-200 rounded-t-md h-28 transition-all hover:bg-slate-300"></div>
+              <div className="w-full bg-[#EAE4DC] rounded-t-md h-28 transition-all hover:bg-slate-300"></div>
               <span className="text-[10px] font-medium text-slate-500 mt-2">$500–800</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <span className="text-[11px] font-mono text-slate-500 mb-1">125</span>
-              <div className="w-full bg-slate-200 rounded-t-md h-16 transition-all hover:bg-slate-300"></div>
+              <div className="w-full bg-[#EAE4DC] rounded-t-md h-16 transition-all hover:bg-slate-300"></div>
               <span className="text-[10px] font-medium text-slate-500 mt-2">$800–1.2k</span>
             </div>
             <div className="flex-1 flex flex-col items-center">
               <span className="text-[11px] font-mono text-slate-500 mb-1">70</span>
-              <div className="w-full bg-slate-200 rounded-t-md h-10 transition-all hover:bg-slate-300"></div>
+              <div className="w-full bg-[#EAE4DC] rounded-t-md h-10 transition-all hover:bg-slate-300"></div>
               <span className="text-[10px] font-medium text-slate-500 mt-2">$1.2k+</span>
             </div>
           </div>
 
-          <div className="flex items-center justify-between pt-4 mt-2 border-t border-slate-100 text-xs font-mono text-slate-600">
+          <div className="flex items-center justify-between pt-4 mt-2 border-t border-[#EAE4DC] text-xs font-mono text-slate-600">
             <span>Median hardware MSRP: <strong className="text-slate-900">$465.00</strong></span>
             <span>Standard Deviation: <strong className="text-slate-900">±$284</strong></span>
           </div>
         </div>
 
         {/* Feature Importance (RF MDI) */}
-        <div className="bg-white p-6 rounded-xl border border-slate-200 shadow-2xs">
-          <div className="flex items-center justify-between pb-3 border-b border-slate-100">
+        <div className="luxury-card p-6">
+          <div className="flex items-center justify-between pb-3 border-b border-[#EAE4DC]">
             <div>
-              <h3 className="text-base font-bold text-slate-900">Feature Importance (RF MDI)</h3>
+              <h3 className="text-base font-bold font-luxury text-slate-900">Feature Importance (RF MDI)</h3>
               <p className="text-xs text-slate-500 mt-0.5">Top predictive signals driving price category segregation.</p>
             </div>
-            <span className="px-2 py-0.5 bg-slate-100 text-slate-600 font-semibold text-[10px] rounded-md">Gini Gain</span>
+            <span className="px-2 py-0.5 bg-amber-50 text-amber-800 font-semibold text-[10px] rounded-md border border-amber-200">Gini Gain</span>
           </div>
 
           <div className="space-y-3 pt-3">
             <div>
               <div className="flex justify-between text-xs mb-1">
                 <span className="font-semibold text-slate-800">System RAM Capacity (GB)</span>
-                <span className="font-mono font-bold text-blue-600">34.0%</span>
+                <span className="font-mono font-bold text-amber-800">34.0%</span>
               </div>
-              <div className="w-full bg-slate-100 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full" style={{ width: '34%' }}></div>
+              <div className="w-full bg-[#EAE4DC] rounded-full h-2">
+                <div className="bg-gradient-to-r from-blue-700 to-indigo-700 h-2 rounded-full" style={{ width: '34%' }}></div>
               </div>
             </div>
 
             <div>
               <div className="flex justify-between text-xs mb-1">
                 <span className="font-semibold text-slate-800">Internal Storage (ROM)</span>
-                <span className="font-mono font-bold text-blue-600">22.0%</span>
+                <span className="font-mono font-bold text-amber-800">22.0%</span>
               </div>
-              <div className="w-full bg-slate-100 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full" style={{ width: '22%' }}></div>
+              <div className="w-full bg-[#EAE4DC] rounded-full h-2">
+                <div className="bg-gradient-to-r from-blue-700 to-indigo-700 h-2 rounded-full" style={{ width: '22%' }}></div>
               </div>
             </div>
 
             <div>
               <div className="flex justify-between text-xs mb-1">
                 <span className="font-semibold text-slate-800">Processor Base Clock (GHz)</span>
-                <span className="font-mono font-bold text-blue-600">18.0%</span>
+                <span className="font-mono font-bold text-amber-800">18.0%</span>
               </div>
-              <div className="w-full bg-slate-100 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full" style={{ width: '18%' }}></div>
+              <div className="w-full bg-[#EAE4DC] rounded-full h-2">
+                <div className="bg-gradient-to-r from-blue-700 to-indigo-700 h-2 rounded-full" style={{ width: '18%' }}></div>
               </div>
             </div>
 
             <div>
               <div className="flex justify-between text-xs mb-1">
                 <span className="font-semibold text-slate-800">Battery Energy Rating (mAh)</span>
-                <span className="font-mono font-bold text-blue-600">12.0%</span>
+                <span className="font-mono font-bold text-amber-800">12.0%</span>
               </div>
-              <div className="w-full bg-slate-100 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full" style={{ width: '12%' }}></div>
+              <div className="w-full bg-[#EAE4DC] rounded-full h-2">
+                <div className="bg-gradient-to-r from-blue-700 to-indigo-700 h-2 rounded-full" style={{ width: '12%' }}></div>
               </div>
             </div>
 
             <div>
               <div className="flex justify-between text-xs mb-1">
                 <span className="font-semibold text-slate-800">Display Pixel Density & PPI</span>
-                <span className="font-mono font-bold text-blue-600">8.0%</span>
+                <span className="font-mono font-bold text-amber-800">8.0%</span>
               </div>
-              <div className="w-full bg-slate-100 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full" style={{ width: '8%' }}></div>
+              <div className="w-full bg-[#EAE4DC] rounded-full h-2">
+                <div className="bg-gradient-to-r from-blue-700 to-indigo-700 h-2 rounded-full" style={{ width: '8%' }}></div>
               </div>
             </div>
 
             <div>
               <div className="flex justify-between text-xs mb-1">
                 <span className="font-semibold text-slate-800">Primary Sensor Resolution (MP)</span>
-                <span className="font-mono font-bold text-blue-600">6.0%</span>
+                <span className="font-mono font-bold text-amber-800">6.0%</span>
               </div>
-              <div className="w-full bg-slate-100 rounded-full h-2">
-                <div className="bg-blue-600 h-2 rounded-full" style={{ width: '6%' }}></div>
+              <div className="w-full bg-[#EAE4DC] rounded-full h-2">
+                <div className="bg-gradient-to-r from-blue-700 to-indigo-700 h-2 rounded-full" style={{ width: '6%' }}></div>
               </div>
             </div>
           </div>
 
-          <div className="flex items-center justify-between pt-3 mt-3 border-t border-slate-100 text-xs font-mono text-slate-500">
+          <div className="flex items-center justify-between pt-3 mt-3 border-t border-[#EAE4DC] text-xs font-mono text-slate-500">
             <span>Combined top-2 impact: <strong className="text-slate-900">56.0%</strong></span>
             <span>Cumulative variance: <strong className="text-slate-900">100.0%</strong></span>
           </div>
@@ -495,21 +495,21 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
       </div>
 
       {/* Blue Action Banner */}
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl p-6 text-white shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-slate-900 via-indigo-950 to-blue-950 rounded-xl p-6 text-white shadow-md flex flex-col sm:flex-row items-center justify-between gap-4 border border-amber-500/20">
         <div className="flex items-center space-x-4">
-          <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-xs flex items-center justify-center shrink-0">
-            <Sparkles className="w-6 h-6 text-white" />
+          <div className="w-12 h-12 rounded-xl bg-white/10 backdrop-blur-xs flex items-center justify-center shrink-0 border border-amber-300/30">
+            <Sparkles className="w-6 h-6 text-amber-300" />
           </div>
           <div>
-            <h4 className="text-lg font-bold">Ready to classify a custom hardware profile?</h4>
-            <p className="text-xs text-blue-100 mt-0.5">
+            <h4 className="text-lg font-bold font-luxury">Ready to classify a custom hardware profile?</h4>
+            <p className="text-xs text-slate-300 mt-0.5">
               Test any arbitrary combination of SoC, RAM, battery, and panel specs against our fine-tuned Random Forest engine.
             </p>
           </div>
         </div>
         <button
           onClick={() => onNavigate('predict')}
-          className="px-5 py-2.5 bg-white text-blue-700 hover:bg-blue-50 font-bold text-xs rounded-lg shadow-xs hover:shadow transition-all shrink-0 flex items-center space-x-2"
+          className="px-5 py-2.5 bg-gradient-to-r from-amber-400 to-amber-300 hover:from-amber-300 hover:to-amber-200 text-slate-950 font-bold text-xs rounded-lg shadow-xs hover:shadow transition-all shrink-0 flex items-center space-x-2"
         >
           <span>Run Custom Inference</span>
           <ArrowRight className="w-4 h-4" />
@@ -517,12 +517,12 @@ export const DashboardView: React.FC<DashboardViewProps> = ({ onNavigate }) => {
       </div>
 
       {/* Row 4: Recent Inferences Log Table */}
-      <div className="bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden">
-        <div className="p-5 border-b border-slate-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+      <div className="luxury-card overflow-hidden">
+        <div className="p-5 border-b border-[#EAE4DC] flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-white/60">
           <div>
             <div className="flex items-center space-x-2">
-              <h3 className="text-base font-bold text-slate-900">Recent Inferences Log</h3>
-              <span className="px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-md border border-emerald-100 flex items-center space-x-1">
+              <h3 className="text-base font-bold font-luxury text-slate-900">Recent Inferences Log</h3>
+              <span className="px-2 py-0.5 bg-emerald-50 text-emerald-800 text-[10px] font-bold rounded-md border border-emerald-200 flex items-center space-x-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                 <span>Live Feed</span>
               </span>

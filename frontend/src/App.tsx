@@ -36,7 +36,7 @@ export function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8FAFC] text-slate-900 flex font-sans antialiased selection:bg-blue-600 selection:text-white">
+    <div className="min-h-screen bg-[#F4EEE6] text-slate-900 flex font-sans antialiased selection:bg-amber-800 selection:text-white">
       {/* Fixed Left Sidebar */}
       <Sidebar
         activeTab={activeTab}
@@ -79,13 +79,13 @@ export function App() {
           )}
         </main>
 
-        {/* Clean Enterprise Footer */}
-        <footer className="border-t border-slate-200 bg-white py-4 px-6 mt-auto">
+        {/* Clean Luxury Footer */}
+        <footer className="border-t border-[#E2D7C8] bg-[#FAF5ED] py-4 px-6 mt-auto">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
             <div className="flex items-center space-x-2">
-              <span className="font-bold text-slate-800">SmartPrice Intelligence Platform</span>
+              <span className="font-bold text-slate-800 font-luxury">SmartPrice Intelligence Platform</span>
               <span>•</span>
-              <span>Milestone 2.4 Production Release</span>
+              <span className="text-amber-900/70 font-medium">Academic Research Benchmark</span>
             </div>
             <div className="text-slate-400 font-mono text-[11px]">
               FastAPI Server (Port 8000) • Scikit-Learn 1.8.0 • React 19 + TypeScript
