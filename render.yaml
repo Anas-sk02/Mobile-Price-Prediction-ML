@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: smartprice-app
+    env: python
+    buildCommand: pip install -r requirements.txt && cd frontend && npm install && npm run build && cd ..
+    startCommand: python run_backend.py
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: NODE_VERSION
+        value: 20.10.0

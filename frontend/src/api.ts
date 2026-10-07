@@ -1,6 +1,8 @@
 import type { SmartphoneSpecs, PredictionResult, ModelComparisonResult, ModelMetricsData, FeatureImportanceData } from './types';
 
-const API_BASE = '/api';
+const API_BASE = (import.meta.env.VITE_API_URL as string | undefined)
+  ? `${(import.meta.env.VITE_API_URL as string).replace(/\/$/, '')}/api`
+  : '/api';
 
 export const PRESET_SMARTPHONES: Record<string, { label: string; tag: string; specs: SmartphoneSpecs }> = {
   flagship: {

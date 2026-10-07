@@ -40,17 +40,35 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+from pathlib import Path
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
 # Mount Routers under /api
 app.include_router(health.router, prefix="/api")
 app.include_router(predict.router, prefix="/api")
 app.include_router(models.router, prefix="/api")
 app.include_router(analytics.router, prefix="/api")
 
+# Serve Frontend static assets in Production if built
+frontend_dist = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
 
-@app.get("/")
-def root():
-    return {
-        "message": "Welcome to SmartPrice ML Prediction API",
-        "docs": "/docs",
-        "health": "/api/health"
-    }
+if frontend_dist.exists() and (frontend_dist / "index.html").exists():
+    if (frontend_dist / "assets").exists():
+        app.mount("/assets", StaticFiles(directory=str(frontend_dist / "assets")), name="assets")
+
+    @app.get("/{full_path:path}")
+    async def serve_spa(full_path: str = ""):
+        # Fallback to index.html for SPA client-side routing
+        file_path = frontend_dist / full_path
+        if full_path and file_path.is_file():
+            return FileResponse(str(file_path))
+        return FileResponse(str(frontend_dist / "index.html"))
+else:
+    @app.get("/")
+    def root():
+        return {
+            "message": "Welcome to SmartPrice ML Prediction API",
+            "docs": "/docs",
+            "health": "/api/health"
+        }
