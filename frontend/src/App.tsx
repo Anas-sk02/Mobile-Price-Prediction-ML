@@ -15,6 +15,7 @@ export function App() {
   const [activeSpecs, setActiveSpecs] = useState<SmartphoneSpecs>(PRESET_SMARTPHONES.flagship.specs);
   const [apiOnline, setApiOnline] = useState<boolean | null>(null);
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     async function checkHealth() {
@@ -37,50 +38,53 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#F4EEE6] text-slate-900 flex font-sans antialiased selection:bg-amber-800 selection:text-white">
-      {/* Fixed Left Sidebar */}
+      {/* Sidebar: Persistent on Desktop, Slide-over on Mobile */}
       <Sidebar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         apiOnline={apiOnline}
+        mobileMenuOpen={mobileMenuOpen}
+        onCloseMobileMenu={() => setMobileMenuOpen(false)}
       />
 
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col min-w-0">
-        {/* Top Header */}
+        {/* Top Header with Mobile Hamburger Trigger */}
         <Header
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
+          onOpenMobileMenu={() => setMobileMenuOpen(true)}
         />
 
-        {/* Dynamic Workspace Views */}
-        <main className="flex-1 px-6 py-7 max-w-7xl w-full mx-auto">
-          {activeTab === 'dashboard' && (
+        {/* Dynamic Workspace Views with Glitch-Free Persistent Mounting */}
+        <main className="flex-1 px-3 sm:px-6 py-4 sm:py-7 max-w-7xl w-full mx-auto">
+          <div className={activeTab === 'dashboard' ? 'tab-pane active' : 'tab-pane'}>
             <DashboardView onNavigate={(tab) => setActiveTab(tab)} />
-          )}
+          </div>
 
-          {activeTab === 'predict' && (
+          <div className={activeTab === 'predict' ? 'tab-pane active' : 'tab-pane'}>
             <PredictorView onCompareWithSpecs={handleCompareWithSpecs} />
-          )}
+          </div>
 
-          {activeTab === 'model-lab' && (
+          <div className={activeTab === 'model-lab' ? 'tab-pane active' : 'tab-pane'}>
             <ModelBenchmarkingView currentSpecs={activeSpecs} />
-          )}
+          </div>
 
-          {activeTab === 'dataset' && (
+          <div className={activeTab === 'dataset' ? 'tab-pane active' : 'tab-pane'}>
             <DatasetAnalyticsView />
-          )}
+          </div>
 
-          {activeTab === 'insights' && (
+          <div className={activeTab === 'insights' ? 'tab-pane active' : 'tab-pane'}>
             <ExplainabilityView />
-          )}
+          </div>
 
-          {activeTab === 'about' && (
+          <div className={activeTab === 'about' ? 'tab-pane active' : 'tab-pane'}>
             <AboutView />
-          )}
+          </div>
         </main>
 
         {/* Clean Luxury Footer */}
-        <footer className="border-t border-[#E2D7C8] bg-[#FAF5ED] py-4 px-6 mt-auto">
+        <footer className="border-t border-[#E2D7C8] bg-[#FAF5ED] py-4 px-4 sm:px-6 mt-auto">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
             <div className="flex items-center space-x-2">
               <span className="font-bold text-slate-800 font-luxury">SmartPrice Intelligence Platform</span>
