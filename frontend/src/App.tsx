@@ -8,7 +8,6 @@ import { PredictorView } from './components/PredictorView';
 import { ModelBenchmarkingView } from './components/ModelBenchmarkingView';
 import { DatasetAnalyticsView } from './components/DatasetAnalyticsView';
 import { ExplainabilityView } from './components/ExplainabilityView';
-import { AboutView } from './components/AboutView';
 
 export function App() {
   const [activeTab, setActiveTab] = useState<string>('dashboard');
@@ -76,10 +75,6 @@ export function App() {
 
           <div className={activeTab === 'insights' ? 'tab-pane active' : 'tab-pane'}>
             <ExplainabilityView />
-          </div>
-
-          <div className={activeTab === 'about' ? 'tab-pane active' : 'tab-pane'}>
-            <AboutView />
           </div>
         </main>
 

@@ -1,11 +1,9 @@
-import React from 'react';
 import {
   LayoutGrid,
   Smartphone,
   FlaskConical,
   Database,
   BarChart3,
-  Info,
   Sparkles,
   X
 } from 'lucide-react';
@@ -31,7 +29,6 @@ export const Sidebar: React.FC<SidebarProps> = ({
     { id: 'model-lab', label: 'Model Lab', icon: FlaskConical },
     { id: 'dataset', label: 'Dataset', icon: Database },
     { id: 'insights', label: 'Insights', icon: BarChart3 },
-    { id: 'about', label: 'About', icon: Info },
   ];
 
   const handleNavClick = (tabId: string) => {
