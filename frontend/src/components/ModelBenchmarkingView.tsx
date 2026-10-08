@@ -5,7 +5,6 @@ import {
   Download,
   Check,
   CheckCircle2,
-  Copy,
   TrendingUp
 } from 'lucide-react';
 
@@ -17,16 +16,7 @@ export const ModelBenchmarkingView: React.FC<ModelBenchmarkingViewProps> = () =>
   const [metricFilter, setMetricFilter] = useState<'all' | 'accuracy' | 'precision' | 'recall' | 'f1'>('all');
   const [selectedCmModel, setSelectedCmModel] = useState<string>('rf');
   const [cmMode, setCmMode] = useState<'counts' | 'percent'>('counts');
-  const [copiedBib, setCopiedBib] = useState<boolean>(false);
   const [copiedLatex, setCopiedLatex] = useState<boolean>(false);
-
-  const bibtexCode = `@inproceedings{smartprice2024,
-  title={Multi-Class Smartphone Price Tier Classification Using Calibrated Ensemble Random Forests},
-  author={ML Pricing Research Lab},
-  booktitle={Proceedings of Applied Machine Learning Laboratory},
-  year={2024},
-  pages={1--12}
-}`;
 
   const latexTable = `\\begin{table}[h]
 \\centering
@@ -43,11 +33,7 @@ K-Nearest Neighbors & 85.2\\% & 84.0\\% & 85.0\\% & 0.849 & 0.918 \\\\
 \\caption{5-Fold Cross-Validation Performance Comparison}
 \\end{table}`;
 
-  const handleCopyBib = () => {
-    navigator.clipboard.writeText(bibtexCode);
-    setCopiedBib(true);
-    setTimeout(() => setCopiedBib(false), 2000);
-  };
+
 
   const handleCopyLatex = () => {
     navigator.clipboard.writeText(latexTable);
@@ -248,100 +234,7 @@ K-Nearest Neighbors & 85.2\\% & 84.0\\% & 85.0\\% & 0.849 & 0.918 \\\\
         </div>
       </div>
 
-      {/* Classification Performance Summary Table */}
-      <div className="luxury-card overflow-hidden">
-        <div className="p-5 border-b border-[#EAE4DC] flex items-center justify-between">
-          <div className="flex items-center space-x-2">
-            <h3 className="text-base font-bold font-luxury text-slate-900">Classification Performance Summary</h3>
-            <span className="px-2 py-0.5 bg-[#FAF8F5] text-slate-600 text-[10px] font-mono rounded-md border border-[#EAE4DC]">5-Fold Cross-Validated Out-of-Fold Metrics</span>
-          </div>
-          <span className="text-xs text-amber-800 font-medium flex items-center space-x-1 font-mono">
-            <span className="w-2 h-2 rounded-full bg-amber-600"></span>
-            <span>Optimal Metric Indicator</span>
-          </span>
-        </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs">
-            <thead className="bg-[#FAF8F5] text-slate-500 font-bold uppercase tracking-wider text-[10px] border-b border-[#EAE4DC]">
-              <tr>
-                <th className="py-3.5 px-5">Model Identifier</th>
-                <th className="py-3.5 px-5">Tuned Hyperparameters</th>
-                <th className="py-3.5 px-4 text-center">Accuracy</th>
-                <th className="py-3.5 px-4 text-center">Macro Prec.</th>
-                <th className="py-3.5 px-4 text-center">Macro Rec.</th>
-                <th className="py-3.5 px-4 text-center">Macro F1</th>
-                <th className="py-3.5 px-4 text-center">Weighted F1</th>
-                <th className="py-3.5 px-4 text-center">ROC-AUC (OvR)</th>
-                <th className="py-3.5 px-4 text-right">Inf. Latency</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-[#EAE4DC] text-slate-700 font-mono">
-              {/* Random Forest Row */}
-              <tr className="bg-amber-50/50 hover:bg-amber-50/80 font-semibold transition-colors">
-                <td className="py-3.5 px-5">
-                  <div className="flex items-center space-x-2">
-                    <span className="font-bold text-slate-900 font-luxury">Random Forest (Ensemble)</span>
-                    <span className="px-1.5 py-0.5 bg-amber-700 text-white font-bold text-[9px] rounded-xs uppercase">Best</span>
-                  </div>
-                </td>
-                <td className="py-3.5 px-5 text-[11px] text-slate-500">n_estimators=300, max_depth=14, criterion='entropy'</td>
-                <td className="py-3.5 px-4 text-center"><span className="px-2 py-0.5 bg-amber-700 text-white rounded-md font-bold">94.8%</span></td>
-                <td className="py-3.5 px-4 text-center"><span className="px-2 py-0.5 bg-amber-100 text-amber-900 rounded-md font-bold">94.5%</span></td>
-                <td className="py-3.5 px-4 text-center"><span className="px-2 py-0.5 bg-amber-100 text-amber-900 rounded-md font-bold">94.8%</span></td>
-                <td className="py-3.5 px-4 text-center"><span className="px-2 py-0.5 bg-amber-100 text-amber-900 rounded-md font-bold">0.945</span></td>
-                <td className="py-3.5 px-4 text-center"><span className="px-2 py-0.5 bg-amber-100 text-amber-900 rounded-md font-bold">0.948</span></td>
-                <td className="py-3.5 px-4 text-center"><span className="px-2 py-0.5 bg-amber-700 text-white rounded-md font-bold">0.987</span></td>
-                <td className="py-3.5 px-4 text-right text-slate-600">18.4 ms</td>
-              </tr>
-
-              {/* SVM Row */}
-              <tr className="hover:bg-[#FAF8F5]/80 transition-colors">
-                <td className="py-3.5 px-5 font-bold text-slate-800 font-luxury">Support Vector Machine</td>
-                <td className="py-3.5 px-5 text-[11px] text-slate-500">C=10.0, kernel='rbf', gamma='scale', probability=True</td>
-                <td className="py-3.5 px-4 text-center">91.3%</td>
-                <td className="py-3.5 px-4 text-center">91.0%</td>
-                <td className="py-3.5 px-4 text-center">91.2%</td>
-                <td className="py-3.5 px-4 text-center">0.911</td>
-                <td className="py-3.5 px-4 text-center">0.913</td>
-                <td className="py-3.5 px-4 text-center">0.963</td>
-                <td className="py-3.5 px-4 text-right text-slate-600">14.1 ms</td>
-              </tr>
-
-              {/* Logistic Regression Row */}
-              <tr className="hover:bg-[#FAF8F5]/80 transition-colors">
-                <td className="py-3.5 px-5 font-bold text-slate-800 font-luxury">Logistic Regression</td>
-                <td className="py-3.5 px-5 text-[11px] text-slate-500">solver='lbfgs', multi_class='multinomial', C=1.0, max_iter=500</td>
-                <td className="py-3.5 px-4 text-center">88.4%</td>
-                <td className="py-3.5 px-4 text-center">87.9%</td>
-                <td className="py-3.5 px-4 text-center">88.2%</td>
-                <td className="py-3.5 px-4 text-center">0.880</td>
-                <td className="py-3.5 px-4 text-center">0.884</td>
-                <td className="py-3.5 px-4 text-center">0.941</td>
-                <td className="py-3.5 px-4 text-right text-slate-600">1.8 ms</td>
-              </tr>
-
-              {/* KNN Row */}
-              <tr className="hover:bg-[#FAF8F5]/80 transition-colors">
-                <td className="py-3.5 px-5 font-bold text-slate-800 font-luxury">K-Nearest Neighbors</td>
-                <td className="py-3.5 px-5 text-[11px] text-slate-500">n_neighbors=9, weights='distance', metric='manhattan'</td>
-                <td className="py-3.5 px-4 text-center">85.2%</td>
-                <td className="py-3.5 px-4 text-center">84.0%</td>
-                <td className="py-3.5 px-4 text-center">85.0%</td>
-                <td className="py-3.5 px-4 text-center">0.849</td>
-                <td className="py-3.5 px-4 text-center">0.852</td>
-                <td className="py-3.5 px-4 text-center">0.918</td>
-                <td className="py-3.5 px-4 text-right text-slate-600">7.9 ms</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div className="p-3.5 bg-[#FAF8F5] border-t border-[#EAE4DC] flex items-center justify-between text-xs text-slate-500 font-mono">
-          <span>Statistical significance: p &lt; 0.001 (paired Wilcoxon signed-rank test RF vs SVM)</span>
-          <span>Scikit-Learn 1.8.0 Benchmark Environment</span>
-        </div>
-      </div>
 
       {/* Row: Cross-Model Performance Vectors & Architectural Insights */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -697,33 +590,6 @@ K-Nearest Neighbors & 85.2\\% & 84.0\\% & 85.0\\% & 0.849 & 0.918 \\\\
         </div>
       </div>
 
-      {/* BibTeX Citation Ready Card */}
-      <div className="luxury-card p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex items-center space-x-3">
-          <div className="p-2.5 bg-amber-50 text-amber-800 rounded-lg border border-amber-200">
-            <FileText className="w-5 h-5" />
-          </div>
-          <div>
-            <h4 className="text-sm font-bold font-luxury text-slate-900">BibTeX Citation Ready</h4>
-            <p className="text-xs text-slate-500 mt-0.5">
-              Cite this evaluation benchmark in your undergraduate or graduate research thesis.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex items-center space-x-3 w-full sm:w-auto">
-          <code className="hidden md:inline-block px-3 py-1.5 bg-[#FAF8F5] border border-[#EAE4DC] rounded-lg text-xs font-mono text-slate-600 truncate max-w-xs">
-            @inproceedings&#123;smartprice2024, author=...&#125;
-          </code>
-          <button
-            onClick={handleCopyBib}
-            className="px-4 py-2 bg-gradient-to-r from-amber-700 to-amber-800 hover:from-amber-800 hover:to-amber-900 text-white font-bold text-xs rounded-lg shadow-xs transition-all shrink-0 flex items-center space-x-1.5 cursor-pointer"
-          >
-            {copiedBib ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-            <span>{copiedBib ? 'Copied' : 'Copy'}</span>
-          </button>
-        </div>
-      </div>
     </div>
   );
 };
