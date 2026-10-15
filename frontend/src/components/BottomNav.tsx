@@ -3,8 +3,7 @@ import {
   LayoutGrid,
   Smartphone,
   FlaskConical,
-  Database,
-  BarChart3
+  Database
 } from 'lucide-react';
 
 interface BottomNavProps {
@@ -18,7 +17,6 @@ export const BottomNav: React.FC<BottomNavProps> = ({ activeTab, setActiveTab })
     { id: 'predict', label: 'Predict', icon: Smartphone },
     { id: 'model-lab', label: 'Models', icon: FlaskConical },
     { id: 'dataset', label: 'Data', icon: Database },
-    { id: 'insights', label: 'Insights', icon: BarChart3 },
   ];
 
   const handleTabChange = (id: string) => {

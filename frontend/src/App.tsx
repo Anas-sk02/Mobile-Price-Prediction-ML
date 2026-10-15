@@ -7,7 +7,6 @@ import { DashboardView } from './components/DashboardView';
 import { PredictorView } from './components/PredictorView';
 import { ModelBenchmarkingView } from './components/ModelBenchmarkingView';
 import { DatasetAnalyticsView } from './components/DatasetAnalyticsView';
-import { ExplainabilityView } from './components/ExplainabilityView';
 import { BottomNav } from './components/BottomNav';
 
 export function App() {
@@ -72,10 +71,6 @@ export function App() {
 
           <div className={activeTab === 'dataset' ? 'tab-pane active' : 'tab-pane'}>
             <DatasetAnalyticsView />
-          </div>
-
-          <div className={activeTab === 'insights' ? 'tab-pane active' : 'tab-pane'}>
-            <ExplainabilityView />
           </div>
         </main>
 
